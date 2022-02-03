@@ -1,0 +1,1833 @@
+Macro: BMAKE_ARGS=-ID:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\ +avilC 
+Macro: BMAKE_BUILD_ALL_GLOBAL=(none)
+Macro: BMAKE_BUILD_ALL=(none)
+Macro: mscemdl01.mke__=(none)
+Bentley Systems Make Utility. Version 10.00.00.26, Mar 15 2018
+Fri Jan 21 20:06:20 2022
+Macro (MsCeMdl01.mke:0): %=$%
+Macro (MsCeMdl01.mke:0): $%=$%
+Macro (MsCeMdl01.mke:0): %=$%
+Macro (MsCeMdl01.mke:0): $%=$%
+Macro (MsCeMdl01.mke:0): winNT=(none)
+Macro (MsCeMdl01.mke:0): MSBuildVersion=400
+Macro (MsCeMdl01.mke:0): TaskMultiTargetingToolsVersion=4.0
+Macro (MsCeMdl01.mke:0): _X86_=(none)
+Macro (MsCeMdl01.mke:0): _MakeFileSpec=D:\dev\C++.MsCeMdl01\MsCeMdl01.mke
+Macro (MsCeMdl01.mke:0): _MakeFilePath=D:\dev\C++.MsCeMdl01\
+Macro (MsCeMdl01.mke:0): _MakeFileName=MsCeMdl01
+Macro (MsCeMdl01.mke:0): _MakeFileExt=.mke
+Macro (MsCeMdl01.mke:0): _MakeFile=MsCeMdl01.mke
+Macro (MsCeMdl01.mke:0): _bmake=bmake
+Macro (MsCeMdl01.mke:0): _bmake_V10=1
+Macro (MsCeMdl01.mke:0): _bmake_LegalCopyright=Copyright (c) 2022 Bentley Systems, Incorporated. All rights reserved.
+Macro (MsCeMdl01.mke:4): PolicyFile=MicroStationPolicy.mki
+Macro (MsCeMdl01.mke:5): DEFAULT_TARGET_PROCESSOR_ARCHITECTURE=x64
+Macro (MsCeMdl01.mke:7): appName=MsCeMdl01
+Macro (MsCeMdl01.mke:10): appObjs=$(o)$(appName)$(oext)
+Macro (MsCeMdl01.mke:11): appRscs=$(o)$(appName).rsc
+Macro (MsCeMdl01.mke:14): baseDir=$(_MakeFilePath)
+Macro (MsCeMdl01.mke:17): mdlLibs=$(MSMDE)library\
+Include: D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\mdl.mki from line 28 of D:\dev\C++.MsCeMdl01\MsCeMdl01.mke
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\mdl.mki], line 6, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\mdl.mki], line 8, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\mdl.mki], line 10, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\mdl.mki], line 12, Conditional close, level = 0.
+Macro (mdl.mki:13): __mdlMKI__=1
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\mdl.mki], line 19, Conditional open, level = 0.
+Macro (mdl.mki:20): MSTN_VERSION=10000000
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\mdl.mki], line 21, Conditional close, level = 0.
+Include: D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\ConfigurePolicy.mki from line 26 of D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\mdl.mki
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\ConfigurePolicy.mki], line 7, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\ConfigurePolicy.mki], line 9, Conditional close, level = 0.
+Macro (ConfigurePolicy.mki:10): __ConfigurePolicy_mki__=1
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\ConfigurePolicy.mki], line 12, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\ConfigurePolicy.mki], line 14, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\ConfigurePolicy.mki], line 16, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\ConfigurePolicy.mki], line 20, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\ConfigurePolicy.mki], line 26, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\ConfigurePolicy.mki], line 28, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\ConfigurePolicy.mki], line 29, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\ConfigurePolicy.mki], line 31, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\ConfigurePolicy.mki], line 34, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\ConfigurePolicy.mki], line 41, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\ConfigurePolicy.mki], line 45, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\ConfigurePolicy.mki], line 49, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\ConfigurePolicy.mki], line 51, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\ConfigurePolicy.mki], line 61, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\ConfigurePolicy.mki], line 63, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\ConfigurePolicy.mki], line 65, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\ConfigurePolicy.mki], line 68, Conditional close, level = 1.
+Include: D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\MicroStationPolicy.mki from line 70 of D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\ConfigurePolicy.mki
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\MicroStationPolicy.mki], line 7, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\MicroStationPolicy.mki], line 9, Conditional close, level = 0.
+Macro (MicroStationPolicy.mki:11): __MicroStationPolicy_mki__=1
+Include: D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\PublicSystemPolicy.mki from line 16 of D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\MicroStationPolicy.mki
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\PublicSystemPolicy.mki], line 8, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\PublicSystemPolicy.mki], line 10, Conditional close, level = 0.
+Macro (PublicSystemPolicy.mki:12): __PublicSystemPolicy_mki__=1
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\PublicSystemPolicy.mki], line 14, Conditional open, level = 0.
+Macro (PublicSystemPolicy.mki:15): StrongNameSignature=NormalSignature
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\PublicSystemPolicy.mki], line 16, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\PublicSystemPolicy.mki], line 22, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\PublicSystemPolicy.mki], line 24, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\PublicSystemPolicy.mki], line 26, Conditional open, level = 0.
+Macro (PublicSystemPolicy.mki:27): TARGET_PROCESSOR_ARCHITECTURE=$(DEFAULT_TARGET_PROCESSOR_ARCHITECTURE)
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\PublicSystemPolicy.mki], line 28, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\PublicSystemPolicy.mki], line 30, Conditional open, level = 0.
+Macro (PublicSystemPolicy.mki:31): slashAmd64=\amd64
+Macro (PublicSystemPolicy.mki:32): slashx64=\x64
+Macro (PublicSystemPolicy.mki:33): slashx86x64=\x64
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\PublicSystemPolicy.mki], line 34, Conditional open, level = 1.
+Macro (PublicSystemPolicy.mki:35): slashXCompileDir=\x86_amd64
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\PublicSystemPolicy.mki], line 38, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\PublicSystemPolicy.mki], line 39, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\PublicSystemPolicy.mki], line 41, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\PublicSystemPolicy.mki], line 43, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\PublicSystemPolicy.mki], line 45, Conditional open, level = 0.
+Macro (PublicSystemPolicy.mki:48): TARGET_PROCESSOR_DIRECTORY=Winx64
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\PublicSystemPolicy.mki], line 51, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\PublicSystemPolicy.mki], line 54, Conditional open, level = 0.
+Macro (PublicSystemPolicy.mki:57): DEFAULT_TARGET_PROCESSOR_DIRECTORY=Winx64
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\PublicSystemPolicy.mki], line 60, Conditional close, level = 0.
+Macro (PublicSystemPolicy.mki:62): TARGET_PLATFORM="Windows"
+Macro (PublicSystemPolicy.mki:63): USE_UNIX_FILENAMES=0
+End: D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\PublicSystemPolicy.mki
+Resume: D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\MicroStationPolicy.mki at line 16
+Include: D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\DefaultToolSet.mki from line 21 of D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\MicroStationPolicy.mki
+Include: D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\SystemPolicy.mki from line 11 of D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\DefaultToolSet.mki
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\SystemPolicy.mki], line 8, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\SystemPolicy.mki], line 10, Conditional close, level = 0.
+Macro (SystemPolicy.mki:12): __SystemPolicy_mki__=1
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\SystemPolicy.mki], line 14, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\SystemPolicy.mki], line 16, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\SystemPolicy.mki], line 25, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\SystemPolicy.mki], line 26, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\SystemPolicy.mki], line 30, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\SystemPolicy.mki], line 31, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\SystemPolicy.mki], line 33, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\SystemPolicy.mki], line 35, Conditional close, level = 0.
+Macro (SystemPolicy.mki:37): TARGET_PROCESSOR_DIRECTORY=$(DEFAULT_TARGET_PROCESSOR_ARCHITECTURE)
+Macro (SystemPolicy.mki:38): DEFAULT_TARGET_PROCESSOR_DIRECTORY=$(DEFAULT_TARGET_PROCESSOR_ARCHITECTURE)
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\SystemPolicy.mki], line 42, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\SystemPolicy.mki], line 47, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\SystemPolicy.mki], line 50, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\SystemPolicy.mki], line 68, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\SystemPolicy.mki], line 71, Conditional close, level = 1.
+Macro (SystemPolicy.mki:73): TARGET_PLATFORM="Windows"
+Macro (SystemPolicy.mki:74): USE_UNIX_FILENAMES=0
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\SystemPolicy.mki], line 76, Conditional open, level = 1.
+Macro (SystemPolicy.mki:77): slashAmd64=\amd64
+Macro (SystemPolicy.mki:78): slashx64=\x64
+Macro (SystemPolicy.mki:79): slashx86x64=\x64
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\SystemPolicy.mki], line 80, Conditional open, level = 2.
+Macro (SystemPolicy.mki:81): slashXCompileDir=\x86_amd64
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\SystemPolicy.mki], line 84, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\SystemPolicy.mki], line 85, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\SystemPolicy.mki], line 87, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\SystemPolicy.mki], line 89, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\SystemPolicy.mki], line 91, Conditional open, level = 1.
+Macro (SystemPolicy.mki:94): TARGET_PROCESSOR_DIRECTORY=Winx64
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\SystemPolicy.mki], line 97, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\SystemPolicy.mki], line 99, Conditional open, level = 1.
+Macro (SystemPolicy.mki:102): DEFAULT_TARGET_PROCESSOR_DIRECTORY=Winx64
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\SystemPolicy.mki], line 105, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\SystemPolicy.mki], line 107, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\SystemPolicy.mki], line 110, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\SystemPolicy.mki], line 113, Conditional close, level = 0.
+End: D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\SystemPolicy.mki
+Resume: D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\DefaultToolSet.mki at line 11
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\DefaultToolSet.mki], line 13, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\DefaultToolSet.mki], line 15, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\DefaultToolSet.mki], line 17, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\DefaultToolSet.mki], line 18, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\DefaultToolSet.mki], line 19, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\DefaultToolSet.mki], line 45, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\DefaultToolSet.mki], line 47, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\DefaultToolSet.mki], line 49, Conditional open, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\DefaultToolSet.mki], line 53, Conditional close, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\DefaultToolSet.mki], line 56, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\DefaultToolSet.mki], line 59, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\DefaultToolSet.mki], line 63, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\DefaultToolSet.mki], line 64, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\DefaultToolSet.mki], line 66, Conditional close, level = 0.
+End: D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\DefaultToolSet.mki
+Resume: D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\MicroStationPolicy.mki at line 21
+Macro (MicroStationPolicy.mki:27): mstation=$(MS)
+Macro (MicroStationPolicy.mki:30): publishIdsInc=$(publishIdsSrc)
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\MicroStationPolicy.mki], line 33, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\MicroStationPolicy.mki], line 35, Conditional close, level = 0.
+Macro (MicroStationPolicy.mki:40): mdlapps=$(mstation)mdlapps\
+Macro (MicroStationPolicy.mki:41): o=$(MSMDE_OUTPUT)objects\
+Macro (MicroStationPolicy.mki:42): rscObjects=$(MSMDE_OUTPUT)rscobj\
+Macro (MicroStationPolicy.mki:43): reqdObjs=$(MSMDE_OUTPUT)reqdobjs\
+Macro (MicroStationPolicy.mki:45): PublicApiIncludes=-I${MSMDE}\include\
+Macro (MicroStationPolicy.mki:46): PublicApiRscIncludes=-i${MSMDE}\include\
+Macro (MicroStationPolicy.mki:48): VCVarsQueryRegistry14File=$(MSMDE)mki\VCVarsQueryRegistry14.mki
+End: D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\MicroStationPolicy.mki
+Resume: D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\ConfigurePolicy.mki at line 70
+Macro (ConfigurePolicy.mki:70): VCVarsQueryRegistry2017File=$(MSMDE)mki\VCVarsQueryRegistry2017.mki
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\ConfigurePolicy.mki], line 75, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\ConfigurePolicy.mki], line 77, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\ConfigurePolicy.mki], line 79, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\ConfigurePolicy.mki], line 81, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\ConfigurePolicy.mki], line 83, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\ConfigurePolicy.mki], line 85, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\ConfigurePolicy.mki], line 88, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\ConfigurePolicy.mki], line 90, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\ConfigurePolicy.mki], line 92, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\ConfigurePolicy.mki], line 94, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\ConfigurePolicy.mki], line 96, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\ConfigurePolicy.mki], line 98, Conditional close, level = 1.
+Include: D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssignTokenValuesToUnusedPolicyLayers.mki from line 100 of D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\ConfigurePolicy.mki
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssignTokenValuesToUnusedPolicyLayers.mki], line 21, Conditional open, level = 0.
+Macro (AssignTokenValuesToUnusedPolicyLayers.mki:22): SystemPolicyMki=dummyvalue
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssignTokenValuesToUnusedPolicyLayers.mki], line 23, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssignTokenValuesToUnusedPolicyLayers.mki], line 25, Conditional open, level = 0.
+Macro (AssignTokenValuesToUnusedPolicyLayers.mki:26): FoundationPolicyMki=dummyvalue
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssignTokenValuesToUnusedPolicyLayers.mki], line 27, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssignTokenValuesToUnusedPolicyLayers.mki], line 29, Conditional open, level = 0.
+Macro (AssignTokenValuesToUnusedPolicyLayers.mki:30): DerivativePolicyMki=dummyvalue
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssignTokenValuesToUnusedPolicyLayers.mki], line 31, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssignTokenValuesToUnusedPolicyLayers.mki], line 33, Conditional open, level = 0.
+Macro (AssignTokenValuesToUnusedPolicyLayers.mki:34): VerticalPolicyMki=dummyvalue
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssignTokenValuesToUnusedPolicyLayers.mki], line 35, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssignTokenValuesToUnusedPolicyLayers.mki], line 37, Conditional open, level = 0.
+Macro (AssignTokenValuesToUnusedPolicyLayers.mki:38): SolutionPolicyMki=dummyvalue
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssignTokenValuesToUnusedPolicyLayers.mki], line 39, Conditional close, level = 0.
+End: D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssignTokenValuesToUnusedPolicyLayers.mki
+Resume: D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\ConfigurePolicy.mki at line 100
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\ConfigurePolicy.mki], line 102, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\ConfigurePolicy.mki], line 104, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\ConfigurePolicy.mki], line 109, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\ConfigurePolicy.mki], line 110, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\ConfigurePolicy.mki], line 112, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\ConfigurePolicy.mki], line 113, Conditional open, level = 2.
+Include: D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki from line 114 of D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\ConfigurePolicy.mki
+Macro (AssertToolSet.mki:8): __AssertToolSet_mki__=1
+Macro (AssertToolSet.mki:9): NO_COMPILERS_MKI=1
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 11, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 16, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 18, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 19, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 21, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 23, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 25, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 26, Conditional open, level = 1.
+Macro (AssertToolSet.mki:27): PROCESSOR_ARCHITECTURE=AMD64
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 28, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 29, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 31, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 34, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 35, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 44, Conditional open, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 49, Conditional close, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 51, Conditional open, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 53, Conditional close, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 54, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 55, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 57, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 58, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 67, Conditional open, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 72, Conditional close, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 74, Conditional open, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 76, Conditional close, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 77, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 78, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 80, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 81, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 83, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 84, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 93, Conditional open, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 98, Conditional close, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 100, Conditional open, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 102, Conditional close, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 103, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 104, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 108, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 109, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 111, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 112, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 121, Conditional open, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 126, Conditional close, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 128, Conditional open, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 130, Conditional close, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 131, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 132, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 142, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 143, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 145, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 146, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 156, Conditional open, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 161, Conditional close, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 163, Conditional open, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 165, Conditional close, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 166, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 167, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 179, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 180, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 182, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 183, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 193, Conditional open, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 198, Conditional close, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 200, Conditional open, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 202, Conditional close, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 203, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 204, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 218, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 233, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 242, Conditional open, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 243, Conditional open, level = 4.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 247, Conditional close, level = 4.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 248, Conditional close, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 249, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 250, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 252, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 253, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 255, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 256, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 266, Conditional open, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 271, Conditional close, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 273, Conditional open, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 275, Conditional close, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 276, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 277, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 279, Conditional open, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 281, Conditional close, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 282, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 283, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 299, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 300, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 302, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 304, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 314, Conditional open, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 316, Conditional open, level = 4.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 319, Conditional close, level = 4.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 324, Conditional close, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 326, Conditional open, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 328, Conditional close, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 329, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 330, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 332, Conditional open, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 334, Conditional close, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 335, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 336, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 354, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 355, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 357, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 359, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 369, Conditional open, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 371, Conditional open, level = 4.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 374, Conditional close, level = 4.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 379, Conditional close, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 381, Conditional open, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 383, Conditional close, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 384, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 385, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 387, Conditional open, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 389, Conditional close, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 390, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 391, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 411, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 412, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 417, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 419, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 421, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 424, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 426, Conditional open, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 428, Conditional open, level = 4.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 430, Conditional close, level = 4.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 431, Conditional close, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 435, Conditional open, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 437, Conditional open, level = 4.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 439, Conditional close, level = 4.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 440, Conditional close, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 444, Conditional open, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 446, Conditional open, level = 4.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 448, Conditional close, level = 4.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 449, Conditional close, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 451, Conditional open, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 459, Conditional open, level = 4.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 461, Conditional close, level = 4.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 462, Conditional close, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 469, Conditional open, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 471, Conditional open, level = 4.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 473, Conditional close, level = 4.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 474, Conditional close, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 478, Conditional open, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 480, Conditional open, level = 4.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 482, Conditional close, level = 4.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 483, Conditional close, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 486, Conditional open, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 488, Conditional open, level = 4.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 490, Conditional close, level = 4.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 491, Conditional close, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 495, Conditional open, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 497, Conditional open, level = 4.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 499, Conditional close, level = 4.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 500, Conditional close, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 503, Conditional open, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 505, Conditional open, level = 4.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 507, Conditional close, level = 4.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 508, Conditional close, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 512, Conditional open, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 514, Conditional open, level = 4.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 516, Conditional close, level = 4.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 517, Conditional close, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 520, Conditional open, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 522, Conditional open, level = 4.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 524, Conditional close, level = 4.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 525, Conditional close, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 529, Conditional open, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 531, Conditional open, level = 4.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 533, Conditional close, level = 4.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 534, Conditional close, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 544, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 546, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 548, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 550, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 551, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 569, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 570, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 572, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 574, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 576, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 581, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 584, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 586, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 587, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 589, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 590, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 593, Conditional open, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 595, Conditional close, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 599, Conditional open, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 601, Conditional close, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 602, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 603, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 607, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 625, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 626, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 629, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 631, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 633, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 637, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 639, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 645, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 647, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 657, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 659, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 673, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 675, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 689, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 691, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 707, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 715, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 721, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 722, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 724, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 725, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 732, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 733, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 735, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 736, Conditional close, level = 1.
+Macro (AssertToolSet.mki:738): CSC_VERSION_DEF=CSC_VERSION_$(CSC_VERSION)
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 739, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 744, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 745, Conditional open, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 747, Conditional close, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 748, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 754, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 755, Conditional open, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 757, Conditional close, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 758, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 764, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 766, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 767, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 768, Conditional open, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 770, Conditional close, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 771, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 777, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 779, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 780, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 781, Conditional open, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 783, Conditional close, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 784, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 791, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 793, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 801, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 803, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 804, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 806, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 807, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 808, Conditional open, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 810, Conditional close, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 811, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 819, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 821, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 822, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 824, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 825, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 826, Conditional open, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 828, Conditional close, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 829, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 839, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 842, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 843, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 845, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 846, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 847, Conditional open, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 849, Conditional close, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 850, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 860, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 862, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 863, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 865, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 866, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 867, Conditional open, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 869, Conditional close, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 870, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 879, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 880, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 883, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 905, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 907, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 909, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 912, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 915, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 923, Conditional close, level = 1.
+
+Target: SAVE[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 956, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 959, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 971, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 977, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 979, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 981, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 985, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 989, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 992, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 994, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 995, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 997, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1002, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1003, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1005, Conditional open, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1009, Conditional close, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1010, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1015, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1036, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1053, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1058, Conditional open, level = 1.
+Macro (AssertToolSet.mki:1059): VsDevCmdArch=amd64
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1064, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1066, Conditional open, level = 1.
+Macro (AssertToolSet.mki:1067): TargetFrameworkVersion=v4.6.2
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1068, Conditional close, level = 1.
+Macro (AssertToolSet.mki:1070): VS_VERSION=16
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1071, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1073, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1077, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1080, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1082, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1083, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1085, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1090, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1091, Conditional open, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1093, Conditional open, level = 4.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1097, Conditional close, level = 4.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1098, Conditional close, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1103, Conditional close, level = 2.
+Running in environment which already has Visual Studio Developer Command Prompt initialized so not importing it.
+Macro (AssertToolSet.mki:1119): INVALID_VC_TOOLSET=14.1
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1120, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1122, Conditional close, level = 2.
+Macro (AssertToolSet.mki:1123): MSVC_VERSION=1920
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1124, Conditional close, level = 1.
+Macro (AssertToolSet.mki:1126): CSC_VERSION=4000
+Macro (AssertToolSet.mki:1127): MSVCDir=$(VCToolsInstallDir)
+Macro (AssertToolSet.mki:1128): FrameworkSDKDir=$(WindowsSdkDir)
+Macro (AssertToolSet.mki:1131): maxOutputLen=8192
+
+Target: always
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1138, Conditional open, level = 1.
+
+Target: alwaysMacro (AssertToolSet.mki:1147): ReferenceAssemblies=C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.2\
+Macro (AssertToolSet.mki:1147): test=C:\Program Files (x86)\Reference Assemblies\Microsoft\Framework\.NETFramework\v4.6.2\
+Macro (AssertToolSet.mki:1147): DisplayName=.NET Framework 4.6.2
+Macro (AssertToolSet.mki:1147): FrameworkReferenceAssembliesNoTrailingSlash=C:\PROGRA~2\REFERE~1\MICROS~1\FRAMEW~1\NETFRA~1\V46~1.2
+Macro (AssertToolSet.mki:1148): FrameworkReferenceAssemblies=$(FrameworkReferenceAssembliesNoTrailingSlash)\
+Macro (AssertToolSet.mki:1149): ReferenceAssemblies=$(FrameworkReferenceAssemblies)
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1155, Conditional close, level = 1.
+
+Target: always
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1161, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1164, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1166, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1167, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1169, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1173, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1175, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1177, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1180, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1181, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1186, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1188, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1189, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1195, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1209, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1220, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1224, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1232, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1238, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1282, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1285, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1293, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1300, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1302, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1303, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1309, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1322, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1333, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1337, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1346, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1352, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1397, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1400, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1408, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1414, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1416, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1417, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1423, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1435, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1446, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1450, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1459, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1465, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1510, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1513, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1521, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1528, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1530, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1532, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1534, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1536, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1541, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1543, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1546, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1554, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1555, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1576, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1577, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1579, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1580, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1581, Conditional open, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1583, Conditional close, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1584, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1585, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1586, Conditional open, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1590, Conditional close, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1599, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1600, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1603, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1619, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1621, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1635, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1636, Conditional open, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1639, Conditional close, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1643, Conditional open, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1647, Conditional close, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1649, Conditional open, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1658, Conditional open, level = 4.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1668, Conditional close, level = 4.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1669, Conditional open, level = 4.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1670, Conditional open, level = 5.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1672, Conditional close, level = 5.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1679, Conditional close, level = 4.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1682, Conditional close, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1684, Conditional open, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1693, Conditional open, level = 4.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1694, Conditional open, level = 5.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1696, Conditional close, level = 5.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1703, Conditional close, level = 4.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1706, Conditional close, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1707, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1710, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1712, Conditional open, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1722, Conditional open, level = 4.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1724, Conditional close, level = 4.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1731, Conditional close, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1734, Conditional open, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1736, Conditional close, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1737, Conditional open, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1741, Conditional close, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1752, Conditional open, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1767, Conditional open, level = 4.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1769, Conditional close, level = 4.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1776, Conditional close, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1779, Conditional open, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1781, Conditional close, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1783, Conditional open, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1787, Conditional close, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1799, Conditional open, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1802, Conditional close, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1805, Conditional open, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1807, Conditional open, level = 4.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1811, Conditional close, level = 4.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1817, Conditional open, level = 4.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1829, Conditional close, level = 4.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1832, Conditional open, level = 4.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1875, Conditional close, level = 4.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1893, Conditional close, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1897, Conditional open, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1901, Conditional close, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1915, Conditional open, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1917, Conditional close, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1920, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1921, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki], line 1922, Conditional close, level = 0.
+End: D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\AssertToolSet.mki
+Resume: D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\ConfigurePolicy.mki at line 114
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\ConfigurePolicy.mki], line 115, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\ConfigurePolicy.mki], line 116, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\ConfigurePolicy.mki], line 124, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\ConfigurePolicy.mki], line 126, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\ConfigurePolicy.mki], line 130, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\ConfigurePolicy.mki], line 131, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\ConfigurePolicy.mki], line 142, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\ConfigurePolicy.mki], line 144, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\ConfigurePolicy.mki], line 155, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\ConfigurePolicy.mki], line 156, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\ConfigurePolicy.mki], line 158, Conditional close, level = 0.
+End: D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\ConfigurePolicy.mki
+Resume: D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\mdl.mki at line 26
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\mdl.mki], line 31, Conditional open, level = 0.
+Include: D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\compilers.mki from line 32 of D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\mdl.mki
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\compilers.mki], line 19, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\compilers.mki], line 22, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\compilers.mki], line 23, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\compilers.mki], line 27, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\compilers.mki], line 28, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\compilers.mki], line 31, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\compilers.mki], line 32, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\compilers.mki], line 36, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\compilers.mki], line 37, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\compilers.mki], line 40, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\compilers.mki], line 43, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\compilers.mki], line 45, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\compilers.mki], line 47, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\compilers.mki], line 49, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\compilers.mki], line 53, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\compilers.mki], line 56, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\compilers.mki], line 60, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\compilers.mki], line 62, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\compilers.mki], line 63, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\compilers.mki], line 65, Conditional close, level = 0.
+End: D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\compilers.mki
+Resume: D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\mdl.mki at line 32
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\mdl.mki], line 33, Conditional close, level = 0.
+Include: D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki from line 38 of D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\mdl.mki
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 14, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 16, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 18, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 20, Conditional close, level = 0.
+Macro (common.mki:21): __Common_MKI__=1
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 23, Conditional open, level = 0.
+Include: D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\msfilext.mki from line 24 of D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\msfilext.mki], line 7, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\msfilext.mki], line 9, Conditional close, level = 0.
+Macro (msfilext.mki:10): __MSFilExt_MKI__=1
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\msfilext.mki], line 12, Conditional open, level = 0.
+Macro (msfilext.mki:36): oext=.obj
+Macro (msfilext.mki:37): libext=.lib
+Macro (msfilext.mki:38): stlibext=.lib
+Macro (msfilext.mki:39): exeext=.exe
+Macro (msfilext.mki:40): shlibext=.dll
+Macro (msfilext.mki:41): shlibdebugext=.pdb
+Macro (msfilext.mki:42): stlibdebugext=.pdb
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\msfilext.mki], line 48, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\msfilext.mki], line 50, Conditional open, level = 0.
+Macro (msfilext.mki:53): pchext=.pch
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\msfilext.mki], line 54, Conditional close, level = 0.
+End: D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\msfilext.mki
+Resume: D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki at line 24
+Include: D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\createdir.mki from line 25 of D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\createdir.mki], line 16, Conditional open, level = 0.
+Macro (createdir.mki:17): __createdirMKI__=1
+Macro (createdir.mki:19): tstdir=direxist.ext
+Rule: from [.ext] to [.ext]
+!~@mkdir ${$%}
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\createdir.mki], line 24, Conditional close, level = 0.
+End: D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\createdir.mki
+Resume: D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki at line 25
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 26, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 31, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 33, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 38, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 41, Conditional open, level = 1.
+Macro (common.mki:42): singletonCmd=singleton
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 43, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 45, Conditional open, level = 1.
+Macro (common.mki:46): AddDelayLoadCmd=AddDelayLoad
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 47, Conditional close, level = 1.
+Include: D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntcommon.mki from line 49 of D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntcommon.mki], line 7, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntcommon.mki], line 9, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntcommon.mki], line 11, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntcommon.mki], line 13, Conditional close, level = 0.
+Macro (winntcommon.mki:20): deleteCmd=del
+Macro (winntcommon.mki:21): dirCmd=dir
+Macro (winntcommon.mki:22): copyCmd=copy
+Macro (winntcommon.mki:23): mkdirCmd=mkdir
+Macro (winntcommon.mki:24): rmdirCmd=rmdir
+Macro (winntcommon.mki:25): rmdirForceCmd=echo y | rmdir
+Macro (winntcommon.mki:26): makeFileWritable=attrib -r
+Macro (winntcommon.mki:27): typeFileCmd=type
+Macro (winntcommon.mki:28): shellCmd=cmd.exe /c
+Macro (winntcommon.mki:29): nativeMakeCmd=nmake.exe
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntcommon.mki], line 30, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntcommon.mki], line 32, Conditional close, level = 0.
+Macro (winntcommon.mki:33): LinkDirCmd=$(shellCmd) mklink /d
+Macro (winntcommon.mki:34): LinkFileCmd=$(shellCmd) mklink
+Macro (winntcommon.mki:36): scriptExt=.bat
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntcommon.mki], line 38, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntcommon.mki], line 39, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntcommon.mki], line 49, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntcommon.mki], line 50, Conditional close, level = 0.
+Macro (winntcommon.mki:52): CopyFirstDepToFirstTarget=~@task Microsoft.Build.Tasks.Copy -i:SourceFiles="$<" -i:DestinationFiles="$@"
+Macro (winntcommon.mki:58): manifestCmd=mt.exe
+End: D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntcommon.mki
+Resume: D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki at line 49
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 50, Conditional close, level = 0.
+Macro (common.mki:55): MakeProgram=bmake
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 61, Conditional open, level = 0.
+Macro (common.mki:64): Configuration=Release
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 65, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 73, Conditional open, level = 0.
+Macro (common.mki:76): universalTarget=Rebuild
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 79, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 81, Conditional open, level = 0.
+Macro (common.mki:84): pursuedTarget=$(universalTarget)
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 85, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 87, Conditional open, level = 0.
+Macro (common.mki:88): targetIsUniversal=1
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 89, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 94, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 95, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 101, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 102, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 104, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 106, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 107, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 109, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 111, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 113, Conditional open, level = 1.
+Macro (common.mki:114): CommonMSBuildConfigOpt=-p:Configuration=$(Configuration)
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 115, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 117, Conditional open, level = 1.
+Macro (common.mki:118): MSBuildWarningLevel=-p:WarningLevel=4
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 119, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 130, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 131, Conditional open, level = 2.
+Macro (common.mki:140): CommonMSBuildPlatformOpt=-p:FrameworkDir=$(FrameworkDir)
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 141, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 142, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 144, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 146, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 148, Conditional open, level = 1.
+Macro (common.mki:149): CommonMSBuildOpts=-i:Targets=$(PursuedTarget) $(MSBuildWarningLevel) $(MultiTargetingOpt) $(CommonMSBuildConfigOpt) $(CommonMSBuildPlatformOpt) $(MSBuildVerbosityOpt) $(MSBuildCustomizationChain)
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 150, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 151, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 152, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 162, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 163, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 165, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 166, Conditional open, level = 2.
+Macro (common.mki:167): CustomBeforeMicrosoftCommonTargets=$(MSBuildCommon)Bentley.Common.BeforeMicrosoft.targets
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 168, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 169, Conditional open, level = 2.
+Macro (common.mki:170): CustomAfterMicrosoftCommonTargets=$(MSBuildCommon)Bentley.Common.AfterMicrosoft.targets
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 171, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 173, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 175, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 176, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 178, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 179, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 181, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 182, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 183, Conditional open, level = 3.
+Macro (common.mki:186): MSB-BentleySystemProperties=$(MSBuildCommon)Bentley.System.properties
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 187, Conditional close, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 188, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 189, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 190, Conditional open, level = 3.
+Macro (common.mki:193): MSB-BentleySystemTargets=$(MSBuildCommon)Bentley.System.targets
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 194, Conditional close, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 195, Conditional close, level = 2.
+Macro (common.mki:197): MSBuildCustomizationChain=-p:CustomBeforeMicrosoftCommonTargets=$(CustomBeforeMicrosoftCommonTargets) -p:CustomAfterMicrosoftCommonTargets=$(CustomAfterMicrosoftCommonTargets)
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 199, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 200, Conditional open, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 204, Conditional close, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 205, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 206, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 207, Conditional open, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 211, Conditional close, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 212, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 213, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki], line 215, Conditional close, level = 0.
+End: D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\common.mki
+Resume: D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\mdl.mki at line 38
+Macro (mdl.mki:50): msg=|[== Building $@, ($=) ==]
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\mdl.mki], line 52, Conditional open, level = 0.
+Macro (mdl.mki:53): language=english
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\mdl.mki], line 54, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\mdl.mki], line 56, Conditional open, level = 0.
+Macro (mdl.mki:57): langSpec=$(baseDir)$(language)\
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\mdl.mki], line 58, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\mdl.mki], line 64, Conditional open, level = 0.
+Include: D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki from line 69 of D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\mdl.mki
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 12, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 14, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 16, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 18, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 20, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 22, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 27, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 28, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 32, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 36, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 38, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 39, Conditional close, level = 0.
+Macro (winntmdl.mki:41): BufferOverrunCheckOff=-GS-
+Macro (winntmdl.mki:42): BufferOverrunCheckOn=-GS
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 47, Conditional open, level = 0.
+Macro (winntmdl.mki:48): CCompFpOpts=precise
+Macro (winntmdl.mki:49): CCompOpts=-fp:precise
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 50, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 53, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 54, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 55, Conditional open, level = 2.
+Macro (winntmdl.mki:58): BufferOverrunCheckOption=$(BufferOverrunCheckOff)
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 59, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 60, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 61, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 64, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 65, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 68, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 71, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 73, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 74, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 76, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 77, Conditional close, level = 0.
+Macro: CCOMPOPTS=-fp:precise $(BufferOverrunCheckOption)
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 81, Conditional open, level = 0.
+Macro (winntmdl.mki:82): CPP_EXCEPTION_USE_SYNC=1
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 83, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 85, Conditional open, level = 0.
+Macro (winntmdl.mki:86): CppExceptSynchHandler=-EHs
+Macro (winntmdl.mki:87): CppExceptAsynchHandler=-EHa
+Macro (winntmdl.mki:88): CppExceptTreatCAsNothrow=-EHc
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 90, Conditional open, level = 1.
+Macro (winntmdl.mki:93): ClrExceptionHandler=$(CppExceptAsynchHandler)
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 94, Conditional open, level = 2.
+Macro: CCOMPOPTS=-fp:precise $(BufferOverrunCheckOption) $(CppExceptTreatCAsNothrow)
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 96, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 97, Conditional open, level = 2.
+Macro (winntmdl.mki:101): NativeCppExceptHandler=$(CppExceptSynchHandler)
+Macro (winntmdl.mki:102): DefaultNativeCppExceptHandler=$(CppExceptSynchHandler)
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 103, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 105, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 107, Conditional open, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 109, Conditional close, level = 3.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 112, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 117, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 118, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 120, Conditional open, level = 0.
+Macro: CCOMPOPTS=-fp:precise $(BufferOverrunCheckOption) $(CppExceptTreatCAsNothrow) -GR
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 122, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 128, Conditional open, level = 0.
+Macro (winntmdl.mki:129): CPP=cl
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 130, Conditional close, level = 0.
+Macro (winntmdl.mki:131): CCompCmd=$(CPP)
+Macro (winntmdl.mki:132): CCCompCmd=$(CPP)
+Macro (winntmdl.mki:134): CPreprocCmd=$(CCompCmd) -EP -C
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 136, Conditional open, level = 0.
+Macro (winntmdl.mki:137): LINK32=link
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 138, Conditional close, level = 0.
+Macro (winntmdl.mki:139): CLinkCmd=$(LINK32) -out:$@ $(CLinkOpts)
+Macro (winntmdl.mki:140): CLibCmd=lib
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 142, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 145, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 149, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 150, Conditional close, level = 0.
+Macro (winntmdl.mki:152): socket_lib=$(ntPlatformLib)ws2_32.lib
+Macro (winntmdl.mki:154): mdlbltinLib=$(mdlLibs)mdlbltin.lib
+Macro (winntmdl.mki:159): OptimizerOff=-Od
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 161, Conditional open, level = 0.
+Macro (winntmdl.mki:166): OptimizeForSpeed=-Ox -Oy-
+Macro (winntmdl.mki:167): OptimizeForSpace=-Ox -Oy- -Os
+Include: D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\OptimizerOptionsForCompiler.mki from line 169 of D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\OptimizerOptionsForCompiler.mki], line 9, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\OptimizerOptionsForCompiler.mki], line 12, Conditional close, level = 0.
+End: D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\OptimizerOptionsForCompiler.mki
+Resume: D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki at line 169
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 171, Conditional open, level = 1.
+Macro (winntmdl.mki:174): OptimizerOn=$(OptimizeForSpace)
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 175, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 177, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 182, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 183, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 185, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 187, Conditional close, level = 0.
+Macro (winntmdl.mki:189): BUGGY_MSVC50_OPTIMIZER=1
+Macro (winntmdl.mki:190): OptimizerDefault=$(OptimizerOn)
+Macro (winntmdl.mki:191): OptimizerFlag=$(OptimizerDefault)
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 196, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 199, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 201, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 204, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 206, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 208, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 211, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 212, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 220, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 223, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 235, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 238, Conditional open, level = 1.
+Macro (winntmdl.mki:247): crt_opt=-MD
+Macro (winntmdl.mki:248): cRuntimeLib=msvcrt.lib
+Macro (winntmdl.mki:249): cRuntime=$(ntLib)$(cRuntimeLib)
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 250, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 251, Conditional close, level = 0.
+Macro: CRT_OPT=-MD -D__EXCEPTIONS
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 256, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 257, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 261, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 264, Conditional open, level = 1.
+Macro (winntmdl.mki:267): cppRuntime=$(ntLib)msvcprt.lib
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 268, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 269, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 271, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 272, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 278, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 281, Conditional close, level = 2.
+Macro (winntmdl.mki:285): warnLevel=-W4 -DBENTLEY_WARNINGS_HIGHEST_LEVEL
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 287, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 292, Conditional close, level = 2.
+Macro (winntmdl.mki:298): commonCOpts=-wd4701
+Macro: COMMONCOPTS=-wd4701 -wd4244
+Macro: COMMONCOPTS=-wd4701 -wd4244 -wd4564
+Macro: COMMONCOPTS=-wd4701 -wd4244 -wd4564 -wd4840
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 305, Conditional open, level = 2.
+Macro: COMMONCOPTS=-wd4701 -wd4244 -wd4564 -wd4840 -wd4702
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 308, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 309, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 311, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 313, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 315, Conditional close, level = 0.
+Macro: COMMONCOPTS=-wd4701 -wd4244 -wd4564 -wd4840 -wd4702 -c $(warnLevel) -DWIN32 -DwinNT $(crt_opt) -D_VISCXX -Gy
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 319, Conditional open, level = 0.
+Macro: COMMONCOPTS=-wd4701 -wd4244 -wd4564 -wd4840 -wd4702 -c $(warnLevel) -DWIN32 -DwinNT $(crt_opt) -D_VISCXX -Gy -wd4996
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 321, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 323, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 325, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 327, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 352, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 355, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 356, Conditional close, level = 0.
+Macro: COMMONCOPTS=-wd4701 -wd4244 -wd4564 -wd4840 -wd4702 -c $(warnLevel) -DWIN32 -DwinNT $(crt_opt) -D_VISCXX -Gy -wd4996 $(OptimizerFlag)
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 360, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 365, Conditional close, level = 0.
+Macro: COMMONCOPTS=-wd4701 -wd4244 -wd4564 -wd4840 -wd4702 -c $(warnLevel) -DWIN32 -DwinNT $(crt_opt) -D_VISCXX -Gy -wd4996 $(OptimizerFlag) -D_CONVERSION_DONT_USE_THREAD_LOCALE
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 374, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 376, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 377, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 379, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 383, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 384, Conditional open, level = 1.
+Macro (winntmdl.mki:389): SECURE_SCL_VALUE=0
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 390, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 391, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 395, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 397, Conditional close, level = 0.
+Macro: COMMONCOPTS=-wd4701 -wd4244 -wd4564 -wd4840 -wd4702 -c $(warnLevel) -DWIN32 -DwinNT $(crt_opt) -D_VISCXX -Gy -wd4996 $(OptimizerFlag) -D_CONVERSION_DONT_USE_THREAD_LOCALE -D_SECURE_SCL=$(SECURE_SCL_VALUE)
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 401, Conditional open, level = 0.
+Macro: COMMONCOPTS=-wd4701 -wd4244 -wd4564 -wd4840 -wd4702 -c $(warnLevel) -DWIN32 -DwinNT $(crt_opt) -D_VISCXX -Gy -wd4996 $(OptimizerFlag) -D_CONVERSION_DONT_USE_THREAD_LOCALE -D_SECURE_SCL=$(SECURE_SCL_VALUE) -DWIN32_LEAN_AND_MEAN
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 403, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 405, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 407, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 412, Conditional open, level = 0.
+Macro: CCOMPOPTS=-fp:precise $(BufferOverrunCheckOption) $(CppExceptTreatCAsNothrow) -GR -wd4345
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 414, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 419, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 421, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 423, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 425, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 427, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 429, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 431, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 433, Conditional close, level = 0.
+Macro (winntmdl.mki:437): winVerDefsPreserved=(none)
+Macro: COMMONCOPTS=-wd4701 -wd4244 -wd4564 -wd4840 -wd4702 -c $(warnLevel) -DWIN32 -DwinNT $(crt_opt) -D_VISCXX -Gy -wd4996 $(OptimizerFlag) -D_CONVERSION_DONT_USE_THREAD_LOCALE -D_SECURE_SCL=$(SECURE_SCL_VALUE) -DWIN32_LEAN_AND_MEAN $(winVerDefs)
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 441, Conditional open, level = 0.
+Macro: COMMONCOPTS=-wd4701 -wd4244 -wd4564 -wd4840 -wd4702 -c $(warnLevel) -DWIN32 -DwinNT $(crt_opt) -D_VISCXX -Gy -wd4996 $(OptimizerFlag) -D_CONVERSION_DONT_USE_THREAD_LOCALE -D_SECURE_SCL=$(SECURE_SCL_VALUE) -DWIN32_LEAN_AND_MEAN $(winVerDefs) -DNTDDI_WIN7SP1=0x06010100
+Macro: COMMONCOPTS=-wd4701 -wd4244 -wd4564 -wd4840 -wd4702 -c $(warnLevel) -DWIN32 -DwinNT $(crt_opt) -D_VISCXX -Gy -wd4996 $(OptimizerFlag) -D_CONVERSION_DONT_USE_THREAD_LOCALE -D_SECURE_SCL=$(SECURE_SCL_VALUE) -DWIN32_LEAN_AND_MEAN $(winVerDefs) -DNTDDI_WIN7SP1=0x06010100 -we4692
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 447, Conditional close, level = 0.
+Macro (winntmdl.mki:449): FileTypeControl=(none)
+Macro (winntmdl.mki:450): FileTypeControlC=/TC
+Macro (winntmdl.mki:451): FileTypeControlCPP=/TP
+Macro (winntmdl.mki:452): MCFileTypeControl=$(FileTypeControlC)
+Macro: COMMONCOPTS=-wd4701 -wd4244 -wd4564 -wd4840 -wd4702 -c $(warnLevel) -DWIN32 -DwinNT $(crt_opt) -D_VISCXX -Gy -wd4996 $(OptimizerFlag) -D_CONVERSION_DONT_USE_THREAD_LOCALE -D_SECURE_SCL=$(SECURE_SCL_VALUE) -DWIN32_LEAN_AND_MEAN $(winVerDefs) -DNTDDI_WIN7SP1=0x06010100 -we4692 $(FileTypeControl)
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 456, Conditional open, level = 0.
+Macro: COMMONCOPTS=-wd4701 -wd4244 -wd4564 -wd4840 -wd4702 -c $(warnLevel) -DWIN32 -DwinNT $(crt_opt) -D_VISCXX -Gy -wd4996 $(OptimizerFlag) -D_CONVERSION_DONT_USE_THREAD_LOCALE -D_SECURE_SCL=$(SECURE_SCL_VALUE) -DWIN32_LEAN_AND_MEAN $(winVerDefs) -DNTDDI_WIN7SP1=0x06010100 -we4692 $(FileTypeControl) -nologo
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 458, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 460, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 461, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 465, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 480, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 483, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 484, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 486, Conditional close, level = 1.
+Macro: CCOMPOPTS=-fp:precise $(BufferOverrunCheckOption) $(CppExceptTreatCAsNothrow) -GR -wd4345 -GF -favor:blend -D_X64_
+Macro (winntmdl.mki:490): AsmCmd=${ntTools}\bin\ml -c
+Macro (winntmdl.mki:491): winNTx64=1
+Macro (winntmdl.mki:493): ntCPU=X64
+Macro (winntmdl.mki:494): resCPU=x64
+Macro (winntmdl.mki:495): rcCPU=_X64_
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 512, Conditional close, level = 0.
+Macro: CCOMPOPTS=-fp:precise $(BufferOverrunCheckOption) $(CppExceptTreatCAsNothrow) -GR -wd4345 -GF -favor:blend -D_X64_ $(commonCOpts)
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 518, Conditional open, level = 0.
+Macro: CCOMPOPTS=-fp:precise $(BufferOverrunCheckOption) $(CppExceptTreatCAsNothrow) -GR -wd4345 -GF -favor:blend -D_X64_ $(commonCOpts) -WX
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 520, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 522, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 524, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 529, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 530, Conditional open, level = 1.
+Macro (winntmdl.mki:531): ntDrive=c:
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 532, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 534, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 535, Conditional open, level = 2.
+Macro (winntmdl.mki:536): ntTools=$(MSVCDir)\
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 539, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 540, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 544, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 545, Conditional open, level = 2.
+Macro (winntmdl.mki:549): ntLib=${ntTools}\lib\x64\
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 550, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 553, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 555, Conditional open, level = 1.
+Macro (winntmdl.mki:556): WinSDKFolder=$(WindowsSdkDir)
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 567, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 569, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 570, Conditional open, level = 2.
+Macro (winntmdl.mki:571): ntPlatformLib=${WinSDKFolder}\lib\${WindowsSDKVersion}\um${slashx86x64}\
+Macro (winntmdl.mki:572): ntPlatformInc=${WinSDKFolder}\include\${WindowsSDKVersion}\um\
+Macro (winntmdl.mki:573): ntPlatformSharedInc=${WinSDKFolder}\include\${WindowsSDKVersion}\shared\
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 594, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 595, Conditional close, level = 1.
+Macro (winntmdl.mki:596): ntInc=${ntTools}\include\
+Macro (winntmdl.mki:597): mfcLib=${ntTools}\atlmfc\lib\
+Macro (winntmdl.mki:598): mfcInc=${ntTools}\atlmfc\include\
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 599, Conditional close, level = 0.
+Macro (winntmdl.mki:601): CDllOpts=-entry:LibMain$(dllEntry)
+Macro (winntmdl.mki:602): CLibsNoRuntime=gdi32.lib user32.lib kernel32.lib
+Macro (winntmdl.mki:603): CLibs=$(CLibsNoRuntime) "$(cRuntime)"
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 605, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 606, Conditional open, level = 1.
+Macro (winntmdl.mki:609): guiEntry=WinMainCRTStartup
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 610, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 611, Conditional close, level = 0.
+Macro (winntmdl.mki:613): guiOpts=-subsystem:windows -entry:$(guiEntry)
+Macro (winntmdl.mki:615): guiOptsDll=-subsystem:windows
+Macro (winntmdl.mki:617): guiLibs=gdi32.lib user32.lib kernel32.lib  "$(cruntime)" advapi32.lib shell32.lib msimg32.lib
+Macro (winntmdl.mki:619): gdiPlusLib=gdiplus.lib
+Macro (winntmdl.mki:621): wtsApiLib=wtsapi32.lib
+Macro (winntmdl.mki:623): clrstartlib=mscoree.lib
+Macro (winntmdl.mki:625): uxThemeLib=uxtheme.lib
+Macro (winntmdl.mki:627): DwmapiLib=Dwmapi.lib
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 629, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 630, Conditional open, level = 1.
+Macro (winntmdl.mki:633): consoleEntry=mainCRTStartup
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 634, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 635, Conditional close, level = 0.
+Macro (winntmdl.mki:637): consoleOpts=-subsystem:console -entry:$(consoleEntry)
+Macro (winntmdl.mki:639): consoleLibs=$(cruntime) kernel32.lib
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 641, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 643, Conditional close, level = 0.
+Macro (winntmdl.mki:645): oleLibs=ole32.lib oleaut32.lib uuid.lib
+Macro (winntmdl.mki:647): mfcLibs=$(mfcLib)nafxcw.lib
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 649, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 650, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 654, Conditional close, level = 1.
+Macro (winntmdl.mki:656): CLinkOpts=$(consolOpts)
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 657, Conditional close, level = 0.
+Macro (winntmdl.mki:659): LinkWarningsToErrorsOnSwitch=-WX
+Macro: CLINKOPTS=$(consolOpts) $(LinkWarningsToErrorsOptions)
+Macro (winntmdl.mki:661): CLibOpts=$(LinkWarningsToErrorsOptions)
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 663, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 664, Conditional open, level = 1.
+Macro (winntmdl.mki:665): LinkWarningsToErrorsDefault=$(LinkWarningsToErrorsOnSwitch)
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 666, Conditional close, level = 1.
+Macro (winntmdl.mki:667): LinkWarningsToErrorsOptions=$(LinkWarningsToErrorsDefault)
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 668, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 670, Conditional open, level = 0.
+Macro: CCOMPOPTS=-fp:precise $(BufferOverrunCheckOption) $(CppExceptTreatCAsNothrow) -GR -wd4345 -GF -favor:blend -D_X64_ $(commonCOpts) -WX $(CCompMultiProcessingOpt)
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 672, Conditional open, level = 1.
+Macro (winntmdl.mki:673): CCompMultiProcessingOpt=-MP$(CCompMultiProcessingCount)
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 674, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 680, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 683, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 687, Conditional close, level = 0.
+Macro: CLINKOPTS=$(consolOpts) $(LinkWarningsToErrorsOptions) $(LinkOptRef)
+Macro (winntmdl.mki:692): LinkOptIcfIterationDefault=2 
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 694, Conditional open, level = 0.
+Macro (winntmdl.mki:695): LinkOptIcfIteration=$(LinkOptIcfIterationDefault)
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 696, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 698, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 702, Conditional close, level = 0.
+Macro (winntmdl.mki:704): LinkOptIcf=(none)
+Macro: CLINKOPTS=$(consolOpts) $(LinkWarningsToErrorsOptions) $(LinkOptRef) $(LinkOptIcf)
+Macro: CLINKOPTS=$(consolOpts) $(LinkWarningsToErrorsOptions) $(LinkOptRef) $(LinkOptIcf) -Ignore:4087 -Ignore:4089 -Ignore:4199 -Ignore:4281
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 715, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 718, Conditional close, level = 0.
+Macro: CLIBOPTS=$(LinkWarningsToErrorsOptions) -Ignore:4087 
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 721, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 723, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 727, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 729, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 731, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 734, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 737, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 740, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 742, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 750, Conditional close, level = 0.
+Macro (winntmdl.mki:764): CCompDebugLowSwitch=-Zd
+Macro (winntmdl.mki:765): CCompDebugFullSwitch=-Zi
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 768, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 769, Conditional open, level = 1.
+Macro: CCOMPDEBUGFULLSWITCH=-Zi -Zo
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 771, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 772, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 775, Conditional open, level = 0.
+Macro (winntmdl.mki:776): IntermediatePdbFile=$(@D)$(CCompPDBName).pdb
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 777, Conditional close, level = 0.
+Macro (winntmdl.mki:778): FdSwitchDefault=-Fd$(IntermediatePdbFile)
+Macro: CCOMPDEBUGFULLSWITCH=-Zi -Zo $(FdSwitchDefault)
+Macro: CCOMPDEBUGLOWSWITCH=-Zd $(FdSwitchDefault)
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 783, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 784, Conditional open, level = 1.
+Macro (winntmdl.mki:789): CCompPDBName=objects
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 790, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 791, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 793, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 794, Conditional open, level = 1.
+Macro (winntmdl.mki:802): CCompDebugOptions=$(CCompDebugFullSwitch)
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 803, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 804, Conditional close, level = 0.
+Macro (winntmdl.mki:806): CCompDebugDefault=$(CCompDebugFullSwitch)
+Macro: CCOMPOPTS=-fp:precise $(BufferOverrunCheckOption) $(CppExceptTreatCAsNothrow) -GR -wd4345 -GF -favor:blend -D_X64_ $(commonCOpts) -WX $(CCompMultiProcessingOpt) $(CCompDebugOptions)
+Macro: CCOMPOPTS=-fp:precise $(BufferOverrunCheckOption) $(CppExceptTreatCAsNothrow) -GR -wd4345 -GF -favor:blend -D_X64_ $(commonCOpts) -WX $(CCompMultiProcessingOpt) $(CCompDebugOptions) $(CCompMixInEnv)
+Macro: CCOMPOPTS=-fp:precise $(BufferOverrunCheckOption) $(CppExceptTreatCAsNothrow) -GR -wd4345 -GF -favor:blend -D_X64_ $(commonCOpts) -WX $(CCompMultiProcessingOpt) $(CCompDebugOptions) $(CCompMixInEnv) $(CCompMixIn)
+Macro (winntmdl.mki:823): WP64OnSwitch=/Wp64
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 824, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 826, Conditional close, level = 0.
+Macro: CCOMPOPTS=-fp:precise $(BufferOverrunCheckOption) $(CppExceptTreatCAsNothrow) -GR -wd4345 -GF -favor:blend -D_X64_ $(commonCOpts) -WX $(CCompMultiProcessingOpt) $(CCompDebugOptions) $(CCompMixInEnv) $(CCompMixIn) $(WP64Option)
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 832, Conditional open, level = 0.
+Macro: CLINKOPTS=$(consolOpts) $(LinkWarningsToErrorsOptions) $(LinkOptRef) $(LinkOptIcf) -Ignore:4087 -Ignore:4089 -Ignore:4199 -Ignore:4281 -MANIFESTUAC:NO
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 838, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 840, Conditional open, level = 0.
+Macro (winntmdl.mki:841): WholeProgramOptimizationOnSwitch=-GL
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 843, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 847, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 853, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 854, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 855, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 856, Conditional open, level = 0.
+Macro (winntmdl.mki:857): ClrOption=-CLR
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 858, Conditional close, level = 0.
+Macro (winntmdl.mki:859): CCompOptsCLR=$(ClrOption)
+Macro: CCOMPOPTSCLR=$(ClrOption) -fp:precise $(BufferOverrunCheckOption) $(CppExceptTreatCAsNothrow) -GR -wd4345 -GF -favor:blend -D_X64_ $(commonCOpts) -WX $(CCompMultiProcessingOpt) $(CCompDebugOptions) $(CCompMixInEnv) $(CCompMixIn) $(WP64Option)
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 861, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 863, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 864, Conditional open, level = 0.
+Macro: CCOMPOPTSCLR=$(ClrOption) -fp:precise $(BufferOverrunCheckOption) $(CppExceptTreatCAsNothrow) -GR -wd4345 -GF -favor:blend -D_X64_ $(commonCOpts) -WX $(CCompMultiProcessingOpt) $(CCompDebugOptions) $(CCompMixInEnv) $(CCompMixIn) $(WP64Option) $(ClrExceptionHandler)
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 866, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 868, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 871, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 875, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 881, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 882, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 883, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 885, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 890, Conditional open, level = 1.
+Macro: CCOMPOPTS=-fp:precise $(BufferOverrunCheckOption) $(CppExceptTreatCAsNothrow) -GR -wd4345 -GF -favor:blend -D_X64_ $(commonCOpts) -WX $(CCompMultiProcessingOpt) $(CCompDebugOptions) $(CCompMixInEnv) $(CCompMixIn) $(WP64Option) $(NativeCppExceptHandler)
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 892, Conditional close, level = 1.
+Macro (winntmdl.mki:895): EnableMinimalRebuildOnSwitch=-Gm
+Macro: CCOMPOPTS=-fp:precise $(BufferOverrunCheckOption) $(CppExceptTreatCAsNothrow) -GR -wd4345 -GF -favor:blend -D_X64_ $(commonCOpts) -WX $(CCompMultiProcessingOpt) $(CCompDebugOptions) $(CCompMixInEnv) $(CCompMixIn) $(WP64Option) $(NativeCppExceptHandler) $(EnableMinimalRebuildOption)
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 897, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 899, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 900, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 906, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 908, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 910, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 911, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 913, Conditional open, level = 0.
+Macro (winntmdl.mki:914): LINKDebugArgs=-debug
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 915, Conditional close, level = 0.
+Macro (winntmdl.mki:917): IncrementalLinkOnSwitch=-incremental:yes
+Macro (winntmdl.mki:918): IncrementalLinkOffSwitch=-incremental:no
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 920, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 921, Conditional open, level = 1.
+Macro (winntmdl.mki:924): IncrementalLinkDefault=$(IncrementalLinkOffSwitch)
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 925, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 926, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 928, Conditional open, level = 0.
+Macro (winntmdl.mki:929): IncrementalLinkOption=$(IncrementalLinkDefault)
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 930, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 932, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 933, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 935, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 937, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 939, Conditional open, level = 0.
+Macro: CLINKOPTS=$(consolOpts) $(LinkWarningsToErrorsOptions) $(LinkOptRef) $(LinkOptIcf) -Ignore:4087 -Ignore:4089 -Ignore:4199 -Ignore:4281 -MANIFESTUAC:NO -Release 
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 941, Conditional close, level = 0.
+Macro: CLINKOPTS=$(consolOpts) $(LinkWarningsToErrorsOptions) $(LinkOptRef) $(LinkOptIcf) -Ignore:4087 -Ignore:4089 -Ignore:4199 -Ignore:4281 -MANIFESTUAC:NO -Release  $(DLM_PDB_LINKOPT) $(LINKDebugArgs) $(IncrementalLinkOption)
+Macro: CDLLOPTS=-entry:LibMain$(dllEntry) $(DLM_PDB_LINKOPT) $(LINKDebugArgs) $(IncrementalLinkOption)
+Macro (winntmdl.mki:945): DLM_SPECIAL_LINKOPT=$(DLM_PDB_LINKOPT) $(LINKDebugArgs) $(IncrementalLinkOption)
+Macro: CLINKOPTS=$(consolOpts) $(LinkWarningsToErrorsOptions) $(LinkOptRef) $(LinkOptIcf) -Ignore:4087 -Ignore:4089 -Ignore:4199 -Ignore:4281 -MANIFESTUAC:NO -Release  $(DLM_PDB_LINKOPT) $(LINKDebugArgs) $(IncrementalLinkOption) -fixed:no
+Macro: DLM_SPECIAL_LINKOPT=$(DLM_PDB_LINKOPT) $(LINKDebugArgs) $(IncrementalLinkOption) -fixed:no
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 950, Conditional open, level = 0.
+Macro (winntmdl.mki:957): CLinkOptsCLR=$(consolOpts) $(LinkWarningsToErrorsOptions) $(LinkOptRef) $(LinkOptIcf) -Ignore:4087 -Ignore:4089 -Ignore:4199 -Ignore:4281 -MANIFESTUAC:NO -Release  $(DLM_PDB_LINKOPT) $(LINKDebugArgs) $(IncrementalLinkOption) -fixed:no
+Macro (winntmdl.mki:958): CDllOptsCLR=-entry:LibMain$(dllEntry) $(DLM_PDB_LINKOPT) $(LINKDebugArgs) $(IncrementalLinkOption)
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 959, Conditional close, level = 0.
+Macro (winntmdl.mki:961): rcOpt=-d$(targetProduct) -dVARIETY=$(VARIETY)
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 962, Conditional open, level = 0.
+Macro: RCOPT=-d$(targetProduct) -dVARIETY=$(VARIETY) -dUSER="\"$(USERNAME) on $(COMPUTERNAME)\""
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 966, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 968, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 969, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 975, Conditional close, level = 1.
+Macro (winntmdl.mki:979): bscmake_exe=@echo Not generating VC source browser files for
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 980, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 985, Conditional open, level = 0.
+Macro (winntmdl.mki:986): CTargetSpec=$@
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki], line 987, Conditional close, level = 0.
+Macro (winntmdl.mki:989): RecipeCCompile=$(CCompCmd) $(PublicApiIncludes) $(cIncs) $(cDefs) $(cuser) $(ProductIncludes) $(CPchOpts) -fp:$(CCompFpOpts) $(CCompOpts) -Fo$(CTargetSpec)
+Rule: from [.c] to [.obj]
+$(msg)
+$(RecipeCCompile) $< $(CCompRedirect)
+~time
+Rule: from [.mc] to [.obj]
+$(msg)
+$(CCompCmd) $(PublicApiIncludes) $(cIncs) $(cDefs) $(cuser) $(ProductIncludes) $(CCompOpts) $(MCPchOpts) $(MCFileTypeControl) -Fo$@ $<
+~time
+Macro (winntmdl.mki:1000): RecipeCPPCompileArgs=$(PublicApiIncludes) $(cIncs) $(cDefs) $(cuser) $(ProductIncludes) $(CCCompOpts) $(CCPchOpts) -fp:$(CCompFpOpts) -Fo$(CTargetSpec)
+Macro (winntmdl.mki:1002): RecipeCPPCompile=$(CCCompCmd) $(RecipeCPPCompileArgs)
+Macro (winntmdl.mki:1004): RecipeCPPPreprocessArgs=$(PublicApiIncludes) $(cIncs) $(cDefs) $(cuser) $(ProductIncludes) $(CCCompOpts) $(CPPPreprocessOpts) -EP
+Macro (winntmdl.mki:1005): RecipeCPPreprocess=$(CCCompCmd) $(RecipeCPPPreprocessArgs)
+Macro (winntmdl.mki:1007): CPP_PREPROCESS_TO_STDOUT=(none)
+Rule: from [.cxx,cpp,cc] to [.obj]
+$(msg)
+$(RecipeCPPCompile) $< $(CCompRedirect)
+~time
+Rule: from [.asm] to [.obj]
+$(msg)
+$(AsmCmd) $(AsmOpts) $(AsmIncs) $(ProductAsmIncludes) -Fo$@ $%$*.asm
+~time
+Rule: from [.s] to [.obj]
+$(msg)
+$(AsmCmd) $(AsmOpts) $(AsmIncs) -o $@ $%$*.s
+~time
+Rule: from [.res] to [.rbj]
+$(msg)
+cvtres -machine:$(resCPU) -out:$@ $%$*.res
+~time
+Rule: from [.rc] to [.res]
+$(msg)
+rc $(rcOpt) -d$(rcCPU) -dwinNT $(ProductRcIncludes) $(rcExtraOpts) -r -fo$@ $%$*.rc
+~time
+Rule: from [.res] to [.mui]
+$(msg)
+$(LINK32) -noentry -dll -out:$@ $<
+~time
+Rule: from [.def] to [.lib]
+$(msg)
+$(CLibCmd) $(CLibOpts) -out:$@ -def:$%$*.def -machine:$(ntCPU)
+~time
+End: D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\winntmdl.mki
+Resume: D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\mdl.mki at line 69
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\mdl.mki], line 70, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\mdl.mki], line 75, Conditional open, level = 0.
+Macro (mdl.mki:76): MLibCmd=$(toolsPath)mlib
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\mdl.mki], line 77, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\mdl.mki], line 79, Conditional open, level = 0.
+Macro (mdl.mki:80): RCompCmd=$(toolsPath)rcomp
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\mdl.mki], line 81, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\mdl.mki], line 83, Conditional open, level = 0.
+Macro (mdl.mki:84): RTypeCmd=$(toolsPath)rsctype
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\mdl.mki], line 85, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\mdl.mki], line 87, Conditional open, level = 0.
+Macro (mdl.mki:88): RLibCmd=$(toolsPath)rlib
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\mdl.mki], line 89, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\mdl.mki], line 91, Conditional open, level = 0.
+Macro (mdl.mki:92): dlmspecCmd=$(toolsPath)dlmspec
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\mdl.mki], line 93, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\mdl.mki], line 98, Conditional open, level = 0.
+Macro (mdl.mki:99): CCCompOpts=$(CCompOpts)
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\mdl.mki], line 100, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\mdl.mki], line 113, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\mdl.mki], line 115, Conditional close, level = 0.
+Rule: from [.mt] to [.r]
+$(msg)
+> $(o)make.opt
+-o$@
+$(rscCompIncs)
+$(altIncs)
+$(PublicApiRscIncludes)
+$(platformOpts)
+$(moreRTypeOpts)
+$(ProductRcIncludes)
+$<
+<
+$(RTypeCmd) @$(o)make.opt
+~time
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\mdl.mki], line 137, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\mdl.mki], line 139, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\mdl.mki], line 143, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\mdl.mki], line 145, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\mdl.mki], line 146, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\mdl.mki], line 148, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\mdl.mki], line 151, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\mdl.mki], line 153, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\mdl.mki], line 156, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\mdl.mki], line 158, Conditional close, level = 0.
+Rule: from [.r] to [.rsc]
+$(msg)
+> $(o)make.opt
+$(rcompOpts)
+-w
+-o$@
+${PublicApiRscIncludes}
+$(rscCompIncs)
+$(altIncs)
+$(ProductRcIncludes)
+-i${langSpec}
+$(moreRscCompileOpts)
+$(platformOpts)
+$<
+<
+$(RCompCmd) @$(o)make.opt
+~time
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\mdl.mki], line 170, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\mdl.mki], line 172, Conditional close, level = 0.
+Rule: from [.r] to [.h]
+$(msg)
+> $(o)make.opt
+-ho$@
+-o$(o)$*.rsc
+$(rcompOpts)
+$(rscCompIncs)
+${PublicApiRscIncludes}
+$(altIncs)
+$(ProductRcIncludes)
+$(platformOpts)
+$(moreRscCompileOpts)
+$<
+<
+$(RCompCmd) @$(o)make.opt
+~time
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\mdl.mki], line 192, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\mdl.mki], line 194, Conditional close, level = 0.
+Rule: from [.xml,keyins] to [.h]
+$(msg)
+> $(o)make.opt
+-ho$@
+$(rcompOpts)
+$(rscCompIncs)
+${PublicApiRscIncludes}
+$(altIncs)
+$(ProductRcIncludes)
+$(platformOpts)
+$(moreRscCompileOpts)
+$<
+<
+$(RCompCmd) @$(o)make.opt
+~time
+Macro (mdl.mki:211): rsignmsg=|[== Digitally Signing $= ==]
+Rule: from [.rsc] to [.signed]
+$(rsignmsg)
+$(rsigncmd) $<
+> $@
+signed
+<
+~time
+Rule: from [.exe] to [.signed]
+$(rsignmsg)
+$(signcodecmd) $<
+> $@
+signed
+<
+~time
+Rule: from [.cab] to [.signed]
+$(rsignmsg)
+$(signcodecmd) $<
+> $@
+signed
+<
+~time
+Rule: from [.CAB] to [.signed]
+$(rsignmsg)
+$(signcodecmd) $<
+> $@
+signed
+<
+~time
+Rule: from [.MSI] to [.signed]
+$(rsignmsg)
+$(signcodecmd) $<
+> $@
+signed
+<
+~time
+Rule: from [.msi] to [.signed]
+$(rsignmsg)
+$(signcodecmd) $<
+> $@
+signed
+<
+~time
+Rule: from [.dll] to [.signed]
+$(rsignmsg)
+$(dllsignAuthenticCmd) $<
+$(signcodecmd) $<
+> $@
+signed
+<
+~time
+Rule: from [.DLL] to [.signed]
+$(rsignmsg)
+$(dllsignAuthenticCmd) $<
+$(signcodecmd) $<
+> $@
+signed
+<
+~time
+Macro (mdl.mki:279): rsignrc1msg=|[== Digitally Signing Rights-Compliant $= ==]
+Macro (mdl.mki:281): mvbasignrc1msg=|[== Digitally Signing Rights-Compliant $= ==]
+Rule: from [.rsc] to [.rc1signed]
+$(rsignrc1msg)
+$(rsignrc1cmd) $<
+> $@
+rc1signed
+<
+~time
+Rule: from [.mvba] to [.rc1signed]
+$(mvbasignrc1msg)
+$(mvbasignrc1cmd) $<
+> $@
+rc1signed
+<
+~time
+Rule: from [.dls] to [.dlo]
+$(msg)
+> $(o)make.opt
+-o$@
+-w$(moduleDef)
+$<
+<
+$(dlmspecCmd) @$(o)make.opt
+~time
+Rule: from [.mc] to [.c]
+$(CopyFirstDepToFirstTarget)
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\mdl.mki], line 325, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\mdl.mki], line 327, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\mdl.mki], line 329, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\mdl.mki], line 332, Conditional close, level = 0.
+End: D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\mdl.mki
+Resume: D:\dev\C++.MsCeMdl01\MsCeMdl01.mke at line 28
+
+Target: always
+~mkdir C:\Users\uk\AppData\Local\Temp\Bentley\MICROS~2\objects\
+~mkdir C:\Users\uk\AppData\Local\Temp\Bentley\MICROS~2\rscobj\
+~mkdir C:\Users\uk\AppData\Local\Temp\Bentley\MICROS~2\reqdobjs\
+Macro (MsCeMdl01.mke:42): DLM_NO_SIGN=1
+Macro (MsCeMdl01.mke:43): DLM_OBJECT_DEST=$(o)
+Macro (MsCeMdl01.mke:44): DLM_NAME=$(appName)
+Macro (MsCeMdl01.mke:45): DLM_NO_DLS=1
+Macro (MsCeMdl01.mke:46): DLM_NO_DEF=1
+Macro (MsCeMdl01.mke:47): DLM_NOENTRY=1
+Macro (MsCeMdl01.mke:48): DLM_OBJECT_FILES=$(appObjs)
+Macro (MsCeMdl01.mke:49): DLM_NO_MANIFEST=1
+Macro (MsCeMdl01.mke:50): DLM_DEST=$(mdlapps)
+Macro (MsCeMdl01.mke:58): LINKER_LIBRARIES=$(mdlLibs)bentley.lib  $(mdlLibs)BentleyAllocator.lib  $(mdlLibs)mdlbltin.lib  $(mdlLibs)RmgrTools.lib  $(mdlLibs)BentleyGeom.lib  $(mdlLibs)DgnPlatform.lib  $(mdlLibs)dgnview.lib
+
+Target: C:\Users\uk\AppData\Local\Temp\Bentley\MICROS~2\objects\MsCeMdl01.rsc
+[== Building C:\Users\uk\AppData\Local\Temp\Bentley\MICROS~2\objects\MsCeMdl01.rsc, (D:\dev\C++.MsCeMdl01\MsCeMdl01.r) ==]
+rcomp @C:\Users\uk\AppData\Local\Temp\Bentley\MICROS~2\objects\make.opt
+MicroStation Resource Compiler 10.16.02
+Macro (MsCeMdl01.mke:65): ERRORLEVEL=0
+
+Target: C:\Users\uk\AppData\Local\Temp\Bentley\MICROS~2\objects\MsCeMdl01.mi
+[== Building C:\Users\uk\AppData\Local\Temp\Bentley\MICROS~2\objects\MsCeMdl01.mi, (C:\Users\uk\AppData\Local\Temp\Bentley\MICROS~2\objects\MsCeMdl01.rsc) ==]
+rlib @C:\Users\uk\AppData\Local\Temp\Bentley\MICROS~2\objects\make.opt
+MicroStation Resource Librarian 10.16.02
+Macro (MsCeMdl01.mke:78): ERRORLEVEL=0
+Macro (MsCeMdl01.mke:80): appRscs=$(o)$(appName).mi 
+Macro (MsCeMdl01.mke:84): msg2=|[-- Dest .ma => D:\ProgramFiles\Bentley\MicroStationCONNECTEdition\MicroStation\mdlapps\MsCeMdl01.ma--]
+
+Target: D:\ProgramFiles\Bentley\MicroStationCONNECTEdition\MicroStation\mdlapps\MsCeMdl01.ma
+[== Building D:\ProgramFiles\Bentley\MicroStationCONNECTEdition\MicroStation\mdlapps\MsCeMdl01.ma, (C:\Users\uk\AppData\Local\Temp\Bentley\MICROS~2\objects\MsCeMdl01.mi) ==]
+[-- Dest .ma => D:\ProgramFiles\Bentley\MicroStationCONNECTEdition\MicroStation\mdlapps\MsCeMdl01.ma--]
+rlib @C:\Users\uk\AppData\Local\Temp\Bentley\MICROS~2\rscobj\make.opt
+MicroStation Resource Librarian 10.16.02
+Macro (MsCeMdl01.mke:94): ERRORLEVEL=0
+
+Target: C:\Users\uk\AppData\Local\Temp\Bentley\MICROS~2\objects\MsCeMdl01.obj
+[== Building C:\Users\uk\AppData\Local\Temp\Bentley\MICROS~2\objects\MsCeMdl01.obj, (D:\dev\C++.MsCeMdl01\MsCeMdl01.cpp) ==]
+cl -ID:\ProgramFiles\Bentley\MicroStationCONNECTSDK\include\     -fp:precise -GS- -EHc -GR -wd4345 -GF -favor:blend -D_X64_ -wd4701 -wd4244 -wd4564 -wd4840 -wd4702 -c -W4 -DBENTLEY_WARNINGS_HIGHEST_LEVEL -DWIN32 -DwinNT -MD -D__EXCEPTIONS -D_VISCXX -Gy -wd4996 -Ox -Oy- -Os -D_CONVERSION_DONT_USE_THREAD_LOCALE -D_SECURE_SCL=0 -DWIN32_LEAN_AND_MEAN  -DNTDDI_WIN7SP1=0x06010100 -we4692  -nologo -WX -MP -Zi -Zo -FdC:\Users\uk\AppData\Local\Temp\Bentley\MICROS~2\objects\objects.pdb    -EHs   -fp:precise -FoC:\Users\uk\AppData\Local\Temp\Bentley\MICROS~2\objects\MsCeMdl01.obj D:\dev\C++.MsCeMdl01\MsCeMdl01.cpp 
+MsCeMdl01.cpp
+Macro (MsCeMdl01.mke:99): ERRORLEVEL=0
+Include: D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki from line 100 of D:\dev\C++.MsCeMdl01\MsCeMdl01.mke
+Macro (dlmlink.mki:103): __dlmlinkMKI__=1
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 105, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 108, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 110, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 113, Conditional close, level = 0.
+Include: D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki from line 115 of D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 8, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 11, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 13, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 16, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 18, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 21, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 23, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 26, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 28, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 31, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 33, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 36, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 38, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 41, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 43, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 46, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 48, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 51, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 53, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 54, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 57, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 58, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 61, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 62, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 64, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 65, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 68, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 69, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 71, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 77, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 80, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 81, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 83, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 86, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 88, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 91, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 93, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 96, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 98, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 101, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 108, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 111, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 113, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 116, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 118, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 121, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 123, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 126, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 128, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 140, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 144, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 146, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 148, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 149, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 151, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 153, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 156, Conditional open, level = 0.
+Macro (dlmlinkCommon.mki:157): DLM_BASENAME=$(DLM_OBJECT_DEST)$(DLM_NAME)
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 158, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 160, Conditional open, level = 0.
+Macro (dlmlinkCommon.mki:161): DLM_EXTENSION=$(shlibext)
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 162, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 164, Conditional open, level = 0.
+Macro (dlmlinkCommon.mki:165): DLM_OUT_NAME=$(DLM_DEST)$(shlibprefix)$(DLM_NAME)$(DLM_API_NUMBER)$(DLM_EXTENSION)
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 166, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 168, Conditional open, level = 0.
+Macro (dlmlinkCommon.mki:169): DlmLinkCmd=$(CLinkCmd)
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 170, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 173, Conditional open, level = 0.
+Macro (dlmlinkCommon.mki:174): DLM_DLO_DEST=$(DLM_OBJECT_DEST)
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 175, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 177, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 178, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 182, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 183, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 186, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 187, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 188, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 192, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 193, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 195, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 197, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 198, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 203, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 205, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 210, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki], line 212, Conditional close, level = 0.
+End: D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlinkCommon.mki
+Resume: D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki at line 115
+Macro (dlmlink.mki:117): ALL_DLM_OBJS=$(DLM_OBJECT_FILES) $(LINKER_LIBRARIES) $(LINKER_LIBRARIES_DELAYLOADED)
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 119, Conditional open, level = 0.
+Macro (dlmlink.mki:120): DLM_EXPORT_NAME=$(DLM_EXPORT_DEST)$(DLM_NAME).lib
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 121, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 123, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 125, Conditional close, level = 0.
+Macro (dlmlink.mki:127): DLM_MODULE_DEF=$(DLM_OBJECT_DEST)$(DLM_NAME).def
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 128, Conditional open, level = 0.
+Macro: LINKER_LIBRARIES=$(mdlLibs)bentley.lib  $(mdlLibs)BentleyAllocator.lib  $(mdlLibs)mdlbltin.lib  $(mdlLibs)RmgrTools.lib  $(mdlLibs)BentleyGeom.lib  $(mdlLibs)DgnPlatform.lib  $(mdlLibs)dgnview.lib $(CLibs)
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 132, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 134, Conditional open, level = 0.
+Macro (dlmlink.mki:135): DLS_NAME=$(DLM_NAME)
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 136, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 138, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 139, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 140, Conditional open, level = 2.
+Macro (dlmlink.mki:143): DLM_SYMB_NAME=$(DLM_DEST)$(DLM_NAME)$(DLM_API_NUMBER).pdb
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 144, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 145, Conditional close, level = 1.
+Macro (dlmlink.mki:146): DLM_SYMB_OPTS=-pdb:"$(DLM_SYMB_NAME)"
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 147, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 149, Conditional close, level = 1.
+
+Target: always[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 154, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 156, Conditional open, level = 0.
+Macro (dlmlink.mki:157): DLM_NO_IMPLIB=1
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 158, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 164, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 170, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 173, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 175, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 176, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 177, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 179, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 180, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 182, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 188, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 198, Conditional open, level = 0.
+Macro (dlmlink.mki:199): DLM_EXPORT_DEST=$(DLM_OBJECT_DEST)
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 200, Conditional close, level = 0.
+Macro (dlmlink.mki:205): dlmLinkSaveCCPchOpts=(none)
+Macro (dlmlink.mki:206): dlmLinkSaveFileTypeControl=(none)
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 209, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 216, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 218, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 229, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 231, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 236, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 239, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 247, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 251, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 252, Conditional close, level = 0.
+Macro (dlmlink.mki:253): CCPchOpts=(none)
+Macro (dlmlink.mki:254): FileTypeControl=(none)
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 257, Conditional open, level = 0.
+Macro (dlmlink.mki:258): DLM_EXP_DEST=$(DLM_EXPORT_DEST)
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 259, Conditional close, level = 0.
+Macro (dlmlink.mki:261): DLM_REQD_LIBS=$(mdlLibs)
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 265, Conditional close, level = -1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 265, Conditional open, level = -1.
+Macro (dlmlink.mki:268): _libResponseFile=$(DLM_OBJECT_DEST)$(DLM_NAME)lib.rsp
+Macro (dlmlink.mki:269): _linkResponseFile=$(DLM_OBJECT_DEST)$(DLM_NAME)link.rsp
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 275, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 281, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 284, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 286, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 287, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 288, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 290, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 291, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 293, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 299, Conditional close, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 304, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 314, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 316, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 319, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 321, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 324, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 326, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 327, Conditional close, level = 0.
+Macro: ALL_DLM_OBJS=$(DLM_OBJECT_FILES) $(LINKER_LIBRARIES) $(LINKER_LIBRARIES_DELAYLOADED) $(DLM_OBJECT_PCH)
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 333, Conditional open, level = 0.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 337, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 339, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 340, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 342, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 346, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 347, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 349, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 352, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 353, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 355, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 358, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 359, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 361, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 363, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 365, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 366, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 369, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 370, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 371, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 373, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 374, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 376, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 378, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 383, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 385, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 386, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 388, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 390, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 391, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 393, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 394, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 398, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 399, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 400, Conditional open, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 402, Conditional close, level = 2.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 403, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 405, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 407, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 408, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 410, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 411, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 413, Conditional close, level = 1.
+
+Target: "D:\ProgramFiles\Bentley\MicroStationCONNECTEdition\MicroStation\mdlapps\MsCeMdl01.dll"
+[== Building "D:\ProgramFiles\Bentley\MicroStationCONNECTEdition\MicroStation\mdlapps\MsCeMdl01.dll", (C:\Users\uk\AppData\Local\Temp\Bentley\MICROS~2\objects\MsCeMdl01.obj) ==]
+link -out:"D:\ProgramFiles\Bentley\MicroStationCONNECTEdition\MicroStation\mdlapps\MsCeMdl01.dll"  -WX   -Ignore:4087 -Ignore:4089 -Ignore:4199 -Ignore:4281 -MANIFESTUAC:NO -Release   -debug -incremental:no -fixed:no @C:\Users\uk\AppData\Local\Temp\Bentley\MICROS~2\objects\MsCeMdl01link.rsp
+Microsoft (R) Incremental Linker Version 14.29.30139.0
+Copyright (C) Microsoft Corporation.  All rights reserved.
+
+-dynamicbase 
+-dll 
+"-out:D:\ProgramFiles\Bentley\MicroStationCONNECTEdition\MicroStation\mdlapps\MsCeMdl01.dll" 
+"-implib:C:\Users\uk\AppData\Local\Temp\Bentley\MICROS~2\objects\MsCeMdl01.lib" 
+"-pdb:D:\ProgramFiles\Bentley\MicroStationCONNECTEdition\MicroStation\mdlapps\MsCeMdl01.pdb" 
+-debug -incremental:no -fixed:no 
+C:\Users\uk\AppData\Local\Temp\Bentley\MICROS~2\objects\MsCeMdl01.obj D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\library\bentley.lib D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\library\BentleyAllocator.lib D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\library\mdlbltin.lib D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\library\RmgrTools.lib D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\library\BentleyGeom.lib D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\library\DgnPlatform.lib D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\library\dgnview.lib gdi32.lib user32.lib kernel32.lib "C:\Program Files (x86)\Microsoft Visual Studio\2019\Professional\VC\Tools\MSVC\14.29.30133\\lib\x64\msvcrt.lib" 
+D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\library\mdlbltin.lib 
+   Creating library C:\Users\uk\AppData\Local\Temp\Bentley\MICROS~2\objects\MsCeMdl01.lib and object C:\Users\uk\AppData\Local\Temp\Bentley\MICROS~2\objects\MsCeMdl01.exp
+Macro (dlmlink.mki:414): ERRORLEVEL=0
+Macro (dlmlink.mki:414): ERRORLEVEL=0
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 415, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 418, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 420, Conditional open, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 423, Conditional close, level = 1.
+[D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki], line 424, Conditional close, level = 0.
+End: D:\ProgramFiles\Bentley\MicroStationCONNECTSDK\mki\dlmlink.mki
+Resume: D:\dev\C++.MsCeMdl01\MsCeMdl01.mke at line 100
+End: D:\dev\C++.MsCeMdl01\MsCeMdl01.mke
+Fri Jan 21 20:06:23 2022, elapsed time: 0:03

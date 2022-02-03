@@ -1,0 +1,110 @@
+#--------------------------------------------------------
+#    MstnCE  MsCeMdl01.mke
+#--------------------------------------------------------
+PolicyFile = MicroStationPolicy.mki
+DEFAULT_TARGET_PROCESSOR_ARCHITECTURE=x64
+
+appName=MsCeMdl01
+
+# intermediate output locations ...
+appObjs = $(o)$(appName)$(oext)
+# appRscs = $(o)$(appName).rsc # EE--: adding commands below
+appRscs = $(o)$(appName).rsc $(o)$(appName)Cmd.rsc # EE++
+
+# sources' location ...
+baseDir = $(_MakeFilePath)
+
+# appname.ddl & appName.ma location ...
+mdlLibs = $(MSMDE)library/
+
+# This is the main MicroStation MDL make include file.
+# It contains
+# - the default rules  and
+# the macro definitions
+# that should always be used
+# when building
+# - MDL applications,
+# - Dynamic Link Libraries (DLL), and
+# - External programs.
+%include mdl.mki
+
+#--------------------------------------------------------
+# Create needed output directories if they don't exist
+#--------------------------------------------------------
+
+always:
+	 ~mkdir $(o)
+	 ~mkdir $(rscObjects)
+	 ~mkdir $(reqdObjs)
+
+#--------------------------------------------------------
+# Define macros for files included in our link and resource merge
+#--------------------------------------------------------
+DLM_NO_SIGN         =   1
+DLM_OBJECT_DEST     =   $(o)
+DLM_NAME            =   $(appName)
+DLM_NO_DLS          =   1
+DLM_NO_DEF          =   1
+DLM_NOENTRY         =   1
+DLM_OBJECT_FILES    =   $(appObjs)
+DLM_NO_MANIFEST     =   1
+DLM_DEST            =   $(mdlapps)
+
+LINKER_LIBRARIES    =   $(mdlLibs)bentley.lib             \
+                        $(mdlLibs)BentleyAllocator.lib    \
+                        $(mdlLibs)mdlbltin.lib            \
+                        $(mdlLibs)RmgrTools.lib           \
+                        $(mdlLibs)BentleyGeom.lib         \
+                        $(mdlLibs)DgnPlatform.lib         \
+                        $(mdlLibs)dgnview.lib
+
+#-----------------------------------------------------------------------
+#   Generate resource files
+#-----------------------------------------------------------------------
+# EE+ : commands
+$(baseDir)$(appName)Cmd.h   :   $(baseDir)$(appName)Cmd.r
+
+
+# EE+ : commands
+$(o)$(appName)Cmd.rsc       :   $(baseDir)$(appName)Cmd.r
+
+
+#EE .r => .rsc
+$(o)$(appName).rsc: $(baseDir)$(appName).r
+
+#---------------------------------------------
+#	Merge the app resources using rlib
+#---------------------------------------------
+#EE .rce => mi
+$(o)$(appName).mi    : $(appRscs)
+	$(msg)
+	> $(o)make.opt
+	-o$@
+	$(appRscs)
+	<
+	$(RLibCmd) @$(o)make.opt
+	~time
+
+appRscs =   \
+    $(o)$(appName).mi # \  #EE
+    # $(o)$(appName).rsc #EE
+
+#EE .mi -> .ma
+msg2 =% |[-- Dest .ma => $(DLM_DEST)$(appName).ma--]
+$(DLM_DEST)$(appName).ma         : $(appRscs)
+        $(msg)
+        $(msg2)
+        > $(rscObjects)make.opt
+        -o$@
+        $(appRscs)
+        <
+        $(RLibCmd) @$(rscObjects)make.opt
+        ~time
+
+#-----------------------------------------------------------------------
+#	Builds any necessary C++ CODE modules and link them to DLL
+#-----------------------------------------------------------------------
+$(o)$(appName)$(oext)       :   $(baseDir)$(appName).cpp
+
+
+%include dlmlink.mki

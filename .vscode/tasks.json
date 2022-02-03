@@ -1,0 +1,75 @@
+{
+	"version": "2.0.0",
+	"tasks": [
+        {
+            "label": "bmake rebuild",
+            "type": "shell",
+            // "command": "bmake +a MsCeMdl01.mke",
+            "command": "bmake",
+			"args": ["+a","MsCeMdl01.mke"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "bmake clean",
+            "type": "shell",
+            "command": "bmake",
+			"args": ["+aD","MsCeMdl01.mke"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {   // build creating a verbose output log
+            "label": "bmake & log",
+            "type": "shell",
+            "command": "bmake",
+            "args": ["+avilC","MsCeMdl01.mke",">","BuildOutput.txt"],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+        {
+            "label": "run microstation",
+            "type": "shell",
+            "command": "D:/ProgramFiles/Bentley/MicroStationCONNECTEdition/MicroStation/microstation.exe",
+            "args": [
+                "-wsMS_CULTURE=en",
+                "D:/ProgramData/Bentley/MicroStationCONNECTEdition/Configuration/WorkSpaces/XXX/WorkSets/AAA/dgn/draw_3D_01.dgn"
+			],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
+        },
+		// {	// Won't be needed; use bmake instead of it.
+		// 	"type": "cppbuild",
+		// 	"label": "C/C++: cl.exe build active file",
+		// 	"command": "cl.exe",
+		// 	"args": [
+		// 		"/Zi",
+		// 		"/EHsc",
+		// 		"/nologo",
+		// 		"/Fe:",
+		// 		"${fileDirname}/${fileBasenameNoExtension}.exe",
+		// 		"${file}",
+		// 		"-I${BOOST_ROOT}",
+		// 		"-I${SDKINC}",
+		// 	],
+		// 	"options": {
+		// 		"cwd": "${fileDirname}"
+		// 	},
+		// 	"problemMatcher": [
+		// 		"$msCompile"
+		// 	],
+		// 	"group": {
+		// 		"kind": "build",
+		// 		"isDefault": true
+		// 	},
+		// 	"detail": "compiler: cl.exe"
+		// }
+	]
+}
