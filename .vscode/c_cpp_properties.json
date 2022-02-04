@@ -5,7 +5,8 @@
             "includePath": [
                 "${workspaceFolder}/**",
                 "${BOOST_ROOT}",
-                "${SDKINC}"
+                "${SDKINC}",
+                "."
             ],
             "defines": [
                 "_DEBUG",

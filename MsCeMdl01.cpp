@@ -1,17 +1,16 @@
-// #include<iostream>
+#undef __EDG__ // EE Bentley
 
-// #define winNT       //EE Bentley
-#undef __EDG__      // EE Bentley
 #include <iostream> //EE
 #include <string>   //EE
 using namespace std;
 
 #include <Mstn/MdlApi/MdlApi.h>
 #include <DgnPlatform/DgnPlatformApi.h>
+#include <DgnView/DgnElementSetTool.h> //EE+ interactive tools, PlaceBsSurfaceTool, <- RedrawElems
+#include "MsCeMdl01Cmd.h"              //EE+ bmake GENERATED header file
+#include "PlaceBsSurfaceTool.h"
 #include <Bentley/WString.h> //EE+
-#include "MsCeMdl01Cmd.h"
-
-// #include <Mstn/MdlApi/msmfc.h> //EE MFC
+// #include <Mstn/MdlApi/msmfc.h>         //EE MFC
 
 // No ; needed
 USING_NAMESPACE_BENTLEY_DGNPLATFORM
@@ -49,13 +48,13 @@ void createAProjectedSolid(WCharCP unparsed);
 void createABsplineSurface(WCharCP unparsed);
 
 MdlCommandNumber cmdNums[] =
-{
-    {(CmdHandler)createALine, CMD_MSCEMDL01_CREATE_LINE},
-    {(CmdHandler)createAComplexShape, CMD_MSCEMDL01_CREATE_COMPLEXSHAPE},
-    {(CmdHandler)createAProjectedSolid, CMD_MSCEMDL01_CREATE_PROJECTEDSOLID},
-    {(CmdHandler)createABsplineSurface, CMD_MSCEMDL01_CREATE_BSPLINESURFACE},
-    0
-};
+    {
+        {(CmdHandler)createALine, CMD_MSCEMDL01_CREATE_LINE},
+        {(CmdHandler)createAComplexShape, CMD_MSCEMDL01_CREATE_COMPLEXSHAPE},
+        {(CmdHandler)createAProjectedSolid, CMD_MSCEMDL01_CREATE_PROJECTEDSOLID},
+        {(CmdHandler)createABsplineSurface, CMD_MSCEMDL01_CREATE_BSPLINESURFACE},
+        0
+    };
 
 extern "C" DLLEXPORT void MdlMain(int argc, WCharCP argv[])
 {
@@ -359,71 +358,77 @@ void createAProjectedSolid(WCharCP unparsed)
     eeh.AddToModel();
 }
 
+// void createABsplineSurface(WCharCP unparsed)
+// {
+
+//     MSBsplineSurface bsSurface;
+//     MSBsplineCurve bsCurves[4];
+//     DPoint3d basePt, arcPts[4][3];
+
+//     basePt.x = 5.4 * g_1mu;
+//     basePt.y = -2.3 * g_1mu;
+//     basePt.z = -1.8 * g_1mu;
+//     arcPts[0][0] = arcPts[0][1] = arcPts[0][2] = basePt;
+
+//     DPoint3d center[4];
+
+//     RotMatrix rMatrix[4];
+
+//     double radius = g_1mu / 2;
+
+//     center[0] = center[1] = center[2] = center[3] = basePt;
+
+//     center[0].x += radius;
+
+//     center[1].x += g_1mu;
+//     center[1].y += radius;
+
+//     center[2].x += radius;
+//     center[2].y += g_1mu;
+
+//     center[3].y += radius;
+
+//     DVec3d xVec = DVec3d::From(1, 0, 0), negativeXVec = DVec3d::From(-1, 0, 0);
+
+//     DVec3d yVec = DVec3d::From(0, 1, 0), negativeYVec = DVec3d::From(0, -1, 0);
+
+//     DVec3d zVec = DVec3d::From(0, 0, 1);
+
+//     rMatrix[0].InitFrom2Vectors(xVec, zVec); // Front View
+
+//     rMatrix[1].InitFrom2Vectors(yVec, zVec); // Right View
+
+//     rMatrix[2].InitFrom2Vectors(negativeXVec, zVec); // Back View
+
+//     rMatrix[3].InitFrom2Vectors(negativeYVec, zVec); // Left View
+
+//     EditElementHandle eeh;
+
+//     for (int i = 0; i < 4; i++)
+
+//     {
+
+//         bsCurves[i].InitEllipticArc(center[i], radius, radius, 0, PI, &rMatrix[i]);
+//     }
+
+//     if (SUCCESS == mdlBspline_coonsPatch(&bsSurface, bsCurves))
+
+//     {
+
+//         DraftingElementSchema::ToElement(eeh, bsSurface, nullptr, *ACTIVEMODEL);
+
+//         eeh.AddToModel();
+
+//         mdlBspline_freeSurface(&bsSurface);
+//     }
+
+//     for (int i = 0; i < 4; i++)
+
+//         mdlBspline_freeCurve(&bsCurves[i]);
+// }
+
 void createABsplineSurface(WCharCP unparsed)
 {
-
-    MSBsplineSurface bsSurface;
-    MSBsplineCurve bsCurves[4];
-    DPoint3d basePt, arcPts[4][3];
-
-    basePt.x = 5.4 * g_1mu;
-    basePt.y = -2.3 * g_1mu;
-    basePt.z = -1.8 * g_1mu;
-    arcPts[0][0] = arcPts[0][1] = arcPts[0][2] = basePt;
-
-    DPoint3d center[4];
-
-    RotMatrix rMatrix[4];
-
-    double radius = g_1mu / 2;
-
-    center[0] = center[1] = center[2] = center[3] = basePt;
-
-    center[0].x += radius;
-
-    center[1].x += g_1mu;
-    center[1].y += radius;
-
-    center[2].x += radius;
-    center[2].y += g_1mu;
-
-    center[3].y += radius;
-
-    DVec3d xVec = DVec3d::From(1, 0, 0), negativeXVec = DVec3d::From(-1, 0, 0);
-
-    DVec3d yVec = DVec3d::From(0, 1, 0), negativeYVec = DVec3d::From(0, -1, 0);
-
-    DVec3d zVec = DVec3d::From(0, 0, 1);
-
-    rMatrix[0].InitFrom2Vectors(xVec, zVec); // Front View
-
-    rMatrix[1].InitFrom2Vectors(yVec, zVec); // Right View
-
-    rMatrix[2].InitFrom2Vectors(negativeXVec, zVec); // Back View
-
-    rMatrix[3].InitFrom2Vectors(negativeYVec, zVec); // Left View
-
-    EditElementHandle eeh;
-
-    for (int i = 0; i < 4; i++)
-
-    {
-
-        bsCurves[i].InitEllipticArc(center[i], radius, radius, 0, PI, &rMatrix[i]);
-    }
-
-    if (SUCCESS == mdlBspline_coonsPatch(&bsSurface, bsCurves))
-
-    {
-
-        DraftingElementSchema::ToElement(eeh, bsSurface, nullptr, *ACTIVEMODEL);
-
-        eeh.AddToModel();
-
-        mdlBspline_freeSurface(&bsSurface);
-    }
-
-    for (int i = 0; i < 4; i++)
-
-        mdlBspline_freeCurve(&bsCurves[i]);
+    auto pTool{new PlaceBsSurfaceTool(0.0, 0.0)};
+    pTool->InstallTool();
 }
