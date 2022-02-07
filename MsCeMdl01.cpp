@@ -9,6 +9,7 @@ using namespace std;
 #include <DgnView/DgnElementSetTool.h> //EE+ interactive tools, PlaceBsSurfaceTool, <- RedrawElems
 #include "MsCeMdl01Cmd.h"              //EE+ bmake GENERATED header file
 #include "PlaceBsSurfaceTool.h"
+#include "MsCeMdl01.h"
 #include <Bentley/WString.h> //EE+
 // #include <Mstn/MdlApi/msmfc.h>         //EE MFC
 
@@ -53,8 +54,7 @@ MdlCommandNumber cmdNums[] =
         {(CmdHandler)createAComplexShape, CMD_MSCEMDL01_CREATE_COMPLEXSHAPE},
         {(CmdHandler)createAProjectedSolid, CMD_MSCEMDL01_CREATE_PROJECTEDSOLID},
         {(CmdHandler)createABsplineSurface, CMD_MSCEMDL01_CREATE_BSPLINESURFACE},
-        0
-    };
+        0};
 
 extern "C" DLLEXPORT void MdlMain(int argc, WCharCP argv[])
 {
@@ -100,10 +100,11 @@ extern "C" DLLEXPORT void MdlMain(int argc, WCharCP argv[])
     The use of command names is only necessary
     if you have not defined a command table.
     */
-    RscFileHandle rscFileH;
-    mdlResource_openFile(&rscFileH, NULL, RSC_READONLY); // open MsCeMdl01.ma
-    mdlParse_loadCommandTable(NULL);                     // load the command table from MsCeMdl01.ma
+    RscFileHandle rscFileHandle;
+    mdlResource_openFile(&rscFileHandle, NULL, RSC_READONLY); // open MsCeMdl01.ma
+    mdlParse_loadCommandTable(NULL);                          // load the command table from MsCeMdl01.ma
     mdlSystem_registerCommandNumbers(cmdNums);
+    mdlState_registerStringIds(STRINGLISTID_Commands, STRINGLISTID_Prompts);
 
     // EE-: adding commands
     //  DPoint3d basePt = DPoint3d::FromZero();
@@ -427,8 +428,14 @@ void createAProjectedSolid(WCharCP unparsed)
 //         mdlBspline_freeCurve(&bsCurves[i]);
 // }
 
+// void createABsplineSurface(WCharCP unparsed)
+// {
+//     auto pTool{new PlaceBsSurfaceTool(0.0, 0.0)};
+//     pTool->InstallTool();
+// }
+
 void createABsplineSurface(WCharCP unparsed)
 {
-    auto pTool{new PlaceBsSurfaceTool(0.0, 0.0)};
+    auto pTool { new PlaceBsSurfaceTool(CMDNAME_PlaceBsSurfaceTool, PROMPT_PlaceBsSurfaceTool) };
     pTool->InstallTool();
 }

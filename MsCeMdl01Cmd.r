@@ -1,5 +1,7 @@
 #include <Mstn/MdlApi/rscdefs.r.h>
 #include <Mstn/MdlApi/cmdclass.r.h>
+#include "MsCeMdl01.h"
+
 /*----------------------------------------------------------------------+
 |   Local Defines
 +----------------------------------------------------------------------*/
@@ -28,10 +30,10 @@ CommandTable   CT_SUB =
 
 CommandTable   CT_CREATE =
 {
-    { 1,  CT_NONE   , INHERIT   ,   DEF     , "Line" },
-    { 2,  CT_NONE   , INHERIT   ,   NONE    , "ComplexShape" },
-    { 3,  CT_NONE   , INHERIT   ,   NONE    , "ProjectedSolid" },
-    { 4,  CT_NONE   , INHERIT   ,   NONE    , "BsplineSurface",},
+    { 1,  CT_NONE   , INHERIT   ,   DEF     , "Line"            , CMDNAME_PlaceLine             },
+    { 2,  CT_NONE   , INHERIT   ,   NONE    , "ComplexShape"    , CMDNAME_PlaceComplexShape     },
+    { 3,  CT_NONE   , INHERIT   ,   NONE    , "ProjectedSolid"  , CMDNAME_PlaceProjectedSolid   },
+    { 4,  CT_NONE   , INHERIT   ,   NONE    , "BsplineSurface"  , CMDNAME_PlaceBsSurfaceTool    },
 };
 
 /*

@@ -108,12 +108,16 @@ interrupts the current tool
 */
 void PlaceBsSurfaceTool::_OnRestartTool()
 {
-    auto pTool{new PlaceBsSurfaceTool(GetToolId(), GetToolPrompt())};
+    auto pTool { new PlaceBsSurfaceTool( GetToolId(), GetToolPrompt() ) };
     /*
     Call to
     make this tool instance
     the currently active command.
-    @return SUCCESS if new tool instance is now the currently acitve command.
+
+    @return SUCCESS
+    if the new tool instance
+    is now the currently acitve command.
+
     @see #_OnInstall #_OnPostInstall
     @bsimethod                                                    Bentley Systems
     */

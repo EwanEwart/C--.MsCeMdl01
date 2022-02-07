@@ -61,11 +61,11 @@ LINKER_LIBRARIES    =   $(mdlLibs)bentley.lib             \
 #-----------------------------------------------------------------------
 #   Generate resource files
 #-----------------------------------------------------------------------
-# EE+ : commands
+# EE+ : commands; generates this header
 $(baseDir)$(appName)Cmd.h   :   $(baseDir)$(appName)Cmd.r
 
 
-# EE+ : commands
+# EE+ : commands; generates this resource file
 $(o)$(appName)Cmd.rsc       :   $(baseDir)$(appName)Cmd.r
 
 
@@ -102,14 +102,12 @@ $(DLM_DEST)$(appName).ma         : $(appRscs)
         ~time
 
 #-----------------------------------------------------------------------
-#	Builds any necessary C++ CODE modules and link them to DLL
+#	Builds any necessary C++ CODE modules and link them to the DLL
 #-----------------------------------------------------------------------
 # $(o)$(appName)$(oext)       :   $(baseDir)$(appName).cpp
-$(o)$(appName)$(oext)       :   $(baseDir)$(appName).cpp
+$(o)$(appName)$(oext)           :   $(baseDir)$(appName).cpp
 
-
-$(o)PlaceBsSurfaceTool$(oext)       :   $(baseDir)PlaceBsSurfaceTool.cpp
-
-
+# EE++
+$(o)PlaceBsSurfaceTool$(oext)   :   $(baseDir)PlaceBsSurfaceTool.cpp
 
 %include dlmlink.mki

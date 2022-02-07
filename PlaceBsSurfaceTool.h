@@ -8,6 +8,7 @@
 #include <DgnView/DgnElementSetTool.h> //EE+ interactive tools, PlaceBsSurfaceTool, <- RedrawElems
 #include "MsCeMdl01Cmd.h"              //EE+ bmake GENERATED header file
 #include "PlaceBsSurfaceTool.h"
+#include "MsCeMdl01.h"
 #include <Bentley/WString.h> //EE+
 // #include <Mstn/MdlApi/msmfc.h>         //EE MFC
 
