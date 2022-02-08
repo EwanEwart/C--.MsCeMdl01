@@ -132,3 +132,81 @@ and ordinary .r
 
 to associate the command
 with the tool setting dialogue box.
+
+**MsCeMdl01.r**
+
+a.
+
+The command **CMD_MSCEMDL01_CREATE_BSPLINESURFACE**
+
+corresponds to **ItemList_BsplineSurface**,
+
+and **ItemList_BsplineSurface** defines two item lists. 
+
+When a command is processed and becomes the current command,
+
+MicroStation will find the **CmdItemListRsc** resource
+
+associated with the command
+
+and display its content in the **Tool Settings dialogue box**;
+
+b.
+
+We have defined a **text entry resource**
+
+for the Base Radius. 
+
+15 is the maximum number of characters
+
+that can be entered in the text entry. 
+
+**"%W"** indicates
+
+that the value in the text entry will be displayed in **work unit format**. 
+
+The tilde in **(~B)** indicates
+
+that the B character is underlined
+
+- this is what we usually call a mnemonic. 
+
+When the tool setting dialogue is focused,
+
+press **Alt + B** to select the text entry. 
+
+**g_mscemdl01.baseArcRadius** is the **access string**
+
+for this text entry. 
+
+We can use this variable to **get or set the value** of this text entry.
+
+c.
+
+In the same way,
+
+we have defined a **combo box entry resource**
+
+for the **"placement layer"**. 
+
+The content of a **combo box entry**
+
+often **needs to be assigned by code**.
+
+To this end, a **hook entry ID**
+
+**HOOKITEMID_MyLevelCombo**
+
+is defined in the resource file
+
+and associated with the entry. 
+
+In the future,
+
+a hook function in the .cpp file
+
+should correspond to the hook entry ID. 
+
+Therefore, when the user operates the item,
+
+the hook function in cpp can be called.
