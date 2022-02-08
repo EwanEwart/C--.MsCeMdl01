@@ -30,10 +30,10 @@ CommandTable   CT_SUB =
 
 CommandTable   CT_CREATE =
 {
-    { 1,  CT_NONE   , INHERIT   ,   DEF     , "Line"            , CMDNAME_PlaceLine             },
-    { 2,  CT_NONE   , INHERIT   ,   NONE    , "ComplexShape"    , CMDNAME_PlaceComplexShape     },
-    { 3,  CT_NONE   , INHERIT   ,   NONE    , "ProjectedSolid"  , CMDNAME_PlaceProjectedSolid   },
-    { 4,  CT_NONE   , INHERIT   ,   NONE    , "BsplineSurface"  , CMDNAME_PlaceBsSurfaceTool    },
+    { 1,  CT_NONE   , INHERIT   ,   DEF     , "Line"            , CMDNAME_PlaceLine                                         },
+    { 2,  CT_NONE   , INHERIT   ,   NONE    , "ComplexShape"    , CMDNAME_PlaceComplexShape                                 },
+    { 3,  CT_NONE   , INHERIT   ,   NONE    , "ProjectedSolid"  , CMDNAME_PlaceProjectedSolid                               },
+    { 4,  CT_NONE   , INHERIT   ,   NONE    , "BsplineSurface"  , CMDNAME_PlaceBsSurfaceTool    ,   ItemList_BsplineSurface },
 };
 
 /*

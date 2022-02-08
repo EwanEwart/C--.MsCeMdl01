@@ -101,6 +101,7 @@ $(DLM_DEST)$(appName).ma         : $(appRscs)
         $(RLibCmd) @$(rscObjects)make.opt
         ~time
 
+
 #-----------------------------------------------------------------------
 #	Builds any necessary C++ CODE modules and link them to the DLL
 #-----------------------------------------------------------------------
