@@ -210,3 +210,18 @@ should correspond to the hook entry ID. 
 Therefore, when the user operates the item,
 
 the hook function in cpp can be called.
+
+Create a MicroStation type file **MsCeMdl01Typ.mt** as follows:
+
+#include "MsCeMdl01.h"
+publishStructures (mscemdl01info);
+
+Note:
+
+**.h file**     -- included into --> **.mt file**
+
+**.mt file**    -- generated as  --> **.r file**
+
+**a .r**        -- generates as  ---> **.rsc**
+
+**.rsc**        -- merged into   --> **.ma**

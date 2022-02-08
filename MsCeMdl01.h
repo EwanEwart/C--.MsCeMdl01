@@ -21,7 +21,7 @@
 #define COMBOBOXID_MyLevel          1
 #define HOOKITEMID_MyLevelCombo     1
 
-typedef struct mscelmdl01info
+typedef struct mscemdl01info
 {
     double baseArcRadius;
     Utf16Char levelName[512];

@@ -9,7 +9,8 @@ appName=MsCeMdl01
 # intermediate output locations ...
 appObjs = $(o)$(appName)$(oext) $(o)PlaceBsSurfaceTool$(oext)
 # appRscs = $(o)$(appName).rsc # EE--: adding commands below
-appRscs = $(o)$(appName).rsc $(o)$(appName)Cmd.rsc # EE++
+# appRscs = $(o)$(appName).rsc $(o)$(appName)Cmd.rsc # EE++
+appRscs = $(o)$(appName).rsc $(o)$(appName)Cmd.rsc $(o)$(appname)Type.rsc # EE++
 
 # sources' location ...
 baseDir = $(_MakeFilePath)
@@ -64,13 +65,19 @@ LINKER_LIBRARIES    =   $(mdlLibs)bentley.lib             \
 # EE+ : commands; generates this header
 $(baseDir)$(appName)Cmd.h   :   $(baseDir)$(appName)Cmd.r
 
-
 # EE+ : commands; generates this resource file
 $(o)$(appName)Cmd.rsc       :   $(baseDir)$(appName)Cmd.r
 
 
 #EE .r => .rsc
 $(o)$(appName).rsc: $(baseDir)$(appName).r
+
+#EE
+$(o)$(appName)Type.r    :   $(baseDir)$(appName)Type.mt
+
+
+$(o)$(appName)Type.rsc  :   $(o)$(appName)Type.r
+
 
 #---------------------------------------------
 #	Merge the app resources using rlib
