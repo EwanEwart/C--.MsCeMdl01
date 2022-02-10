@@ -26,9 +26,10 @@ struct PlaceBsSurfaceTool : DgnPrimitiveTool
     bool CreateBsSurface(EditElementHandleR eeh, DPoint3dCP pBasePt);
     virtual void _OnPostInstall() override;
     virtual void _OnRestartTool() override;
-    virtual void _OnDynamicFrame(DgnButtonEventCR ev) override;
-    virtual bool _OnDataButton(DgnButtonEventCR ev) override;
-    virtual bool _OnResetButton(DgnButtonEventCR ev) override;
+    virtual void _OnDynamicFrame(DgnButtonEventCR buttonEvent) override;
+    virtual bool _OnDataButton(DgnButtonEventCR buttonEvent) override;
+    virtual bool _OnResetButton(DgnButtonEventCR buttonEvent) override;
+
 };
 
 #endif // PLACE_BS_SURFACE_TOOL

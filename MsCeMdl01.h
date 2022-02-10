@@ -1,3 +1,5 @@
+#undef __EDG__ // EE Bentley
+
 #ifndef MSCEMDL01_H
 #define MSCEMDL01_H
 
@@ -24,7 +26,7 @@
 typedef struct mscemdl01info
 {
     double baseArcRadius;
-    Utf16Char levelName[512];
+    Utf8Char levelName[512];
 }   MsCeMdl01Info;
 
 #endif // MSCEMDL01_H

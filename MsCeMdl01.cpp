@@ -11,9 +11,12 @@ using namespace std;
 #include "PlaceBsSurfaceTool.h"
 #include "MsCeMdl01.h"
 #include <Bentley/WString.h> //EE+
+#include <string.h> // strcpy_s()
 // #include <Mstn/MdlApi/msmfc.h>         //EE MFC
 
-// No ; needed
+// UI
+#include <Mstn/ISessionMgr.h>
+
 USING_NAMESPACE_BENTLEY_DGNPLATFORM
 USING_NAMESPACE_BENTLEY_MSTNPLATFORM
 USING_NAMESPACE_BENTLEY_MSTNPLATFORM_ELEMENT
@@ -38,6 +41,9 @@ to open this dialogue box):
 */
 double g_1mu;
 
+// UI
+MsCeMdl01Info g_MsCeMdl01;
+
 void createALine(DPoint3dCR basePt);
 void createAComplexShape(DPoint3dCR basePt);
 void createAProjectedSolid(DPoint3dCR basePt);
@@ -55,6 +61,12 @@ MdlCommandNumber cmdNums[] =
         {(CmdHandler)createAProjectedSolid, CMD_MSCEMDL01_CREATE_PROJECTEDSOLID},
         {(CmdHandler)createABsplineSurface, CMD_MSCEMDL01_CREATE_BSPLINESURFACE},
         0};
+
+// UI
+void myLevel_comboHook(DialogItemMessage *dimP);
+DialogHookInfo uHooks[] = {
+    {HOOKITEMID_MyLevelCombo, (PFDialogHook)myLevel_comboHook},
+};
 
 extern "C" DLLEXPORT void MdlMain(int argc, WCharCP argv[])
 {
@@ -105,6 +117,14 @@ extern "C" DLLEXPORT void MdlMain(int argc, WCharCP argv[])
     mdlParse_loadCommandTable(NULL);                          // load the command table from MsCeMdl01.ma
     mdlSystem_registerCommandNumbers(cmdNums);
     mdlState_registerStringIds(STRINGLISTID_Commands, STRINGLISTID_Prompts);
+
+    // UI Publish hook
+    mdlDialog_hookPublish(sizeof(uHooks) / sizeof(DialogHookInfo), uHooks);
+
+    SymbolSet *setP = mdlCExpression_initializeSet(VISIBILITY_DIALOG_BOX, 0, 0);
+    mdlDialog_publishComplexVariable(setP, "mscemdl01info", "g_mscemdl01", &g_MsCeMdl01);
+    g_MsCeMdl01.baseArcRadius = 5000;
+    strcpy_s(g_MsCeMdl01.levelName, 512, "Default");
 
     // EE-: adding commands
     //  DPoint3d basePt = DPoint3d::FromZero();
@@ -436,6 +456,42 @@ void createAProjectedSolid(WCharCP unparsed)
 
 void createABsplineSurface(WCharCP unparsed)
 {
-    auto pTool { new PlaceBsSurfaceTool(CMDNAME_PlaceBsSurfaceTool, PROMPT_PlaceBsSurfaceTool) };
+    auto pTool{new PlaceBsSurfaceTool(CMDNAME_PlaceBsSurfaceTool, PROMPT_PlaceBsSurfaceTool)};
     pTool->InstallTool();
+}
+
+// EE: UI
+void myLevel_comboHook(DialogItemMessage *dimP)
+{
+    RawItemHdr *riP = dimP->dialogItemP->rawItemP;
+
+    dimP->msgUnderstood = TRUE;
+    switch (dimP->messageType)
+    {
+    case DITEM_MESSAGE_CREATE:
+    {
+
+        ListModelP pListModel = mdlListModel_create(1);
+
+        DgnFileP pDgnFile = ISessionMgr::GetActiveDgnFile();
+        for (LevelHandle lh : pDgnFile->GetLevelCacheR())
+        {
+            WString lvlName;
+            lh.GetDisplayName(lvlName);
+            mdlListModel_insertString(pListModel, lvlName.GetWCharCP(), -1);
+        }
+
+        mdlDialog_comboBoxSetListModelP(riP, pListModel);
+        break;
+    }
+    case DITEM_MESSAGE_DESTROY:
+    {
+        ListModelP pListModel = mdlDialog_comboBoxGetListModelP(riP);
+        mdlListModel_destroy(pListModel, TRUE);
+        break;
+    }
+    default:
+        dimP->msgUnderstood = FALSE;
+        break;
+    }
 }

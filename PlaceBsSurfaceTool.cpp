@@ -1,6 +1,10 @@
 #include "PlaceBsSurfaceTool.h"
+#include <Mstn/ISessionMgr.h> //EE: UI
+#include <iostream>
 
 extern double g_1mu;
+// UI
+extern MsCeMdl01Info g_MsCeMdl01;
 
 /*=================================================================================**/ /**
  * The DgnPrimitiveTool class can be used
@@ -40,7 +44,10 @@ bool PlaceBsSurfaceTool::CreateBsSurface(
     MSBsplineCurve bsCurves[4];
     DPoint3d center[4];
     RotMatrix rMatrix[4];
-    double radius = g_1mu / 2;
+    // double radius = g_1mu / 2; //EE-: UI
+    double radius = g_MsCeMdl01.baseArcRadius;
+
+    std::cout << "--- Radius: " << radius << std::endl;
 
     center[0] = center[1] = center[2] = center[3] = *pBasePt;
     center[0].x += radius;
@@ -108,7 +115,7 @@ interrupts the current tool
 */
 void PlaceBsSurfaceTool::_OnRestartTool()
 {
-    auto pTool { new PlaceBsSurfaceTool( GetToolId(), GetToolPrompt() ) };
+    auto pTool{new PlaceBsSurfaceTool(GetToolId(), GetToolPrompt())};
     /*
     Call to
     make this tool instance
@@ -176,14 +183,24 @@ then
 will be called
 after elements have been identified.
 */
-bool PlaceBsSurfaceTool::_OnDataButton(DgnButtonEventCR ev)
+bool PlaceBsSurfaceTool::_OnDataButton(DgnButtonEventCR buttonEvent)
 {
     EditElementHandle eeh;
-    if (CreateBsSurface(eeh, ev.GetPoint()))
+    // if (CreateBsSurface(eeh, buttonEvent.GetPoint())) //EE-: UI
+    // {
+    //     eeh.AddToModel();
+    // }
+    // reinitialise the tool object
+    if (CreateBsSurface(eeh, buttonEvent.GetPoint()))
     {
+        WString wString(g_MsCeMdl01.levelName);
+        FileLevelCacheR levelCache = ISessionMgr::GetActiveDgnFile()->GetLevelCacheR();
+        LevelHandle levelHandle = levelCache.GetLevelByName(wString.GetWCharCP());
+        ElementPropertiesSetterPtr setter = ElementPropertiesSetter::Create();
+        setter->SetLevel(levelHandle.GetLevelId());
+        setter->Apply(eeh);
         eeh.AddToModel();
     }
-    // reinitialise the tool object
     _OnReinitialize();
     // true if _ExitTool has been called and tool object has been freed
     return true;
@@ -194,7 +211,7 @@ The user clicks the rejection button,
 the default is the right button,
 in the view area.
 */
-bool PlaceBsSurfaceTool::_OnResetButton(DgnButtonEventCR ev)
+bool PlaceBsSurfaceTool::_OnResetButton(DgnButtonEventCR buttonEvent)
 {
     _EndDynamics();
     _ExitTool();

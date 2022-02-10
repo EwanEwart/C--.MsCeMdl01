@@ -1,0 +1,2 @@
+﻿  MsCeMdl01.cpp
+C:\Program Files\Bentley\OpenBuildings CONNECT Edition\OpenBuildingsDesignerSDK\include\Mstn\basedefs.h(103,1): fatal error C1189: #error:  Data Alignment must be defined in basedefs.h

@@ -39,7 +39,6 @@ MessageList STRINGLISTID_Prompts =
 CmdItemListRsc  ItemList_BsplineSurface =
 {
     {
-
         {    {10*XC,   YC/2,   15*XC, 0}     , Text      ,   TEXTID_BaseArcRadius    ,   ON  , 0   , ""   , ""   },
         {    {10*XC,   YC*2,   20*XC, 0}     , ComboBox  ,   COMBOBOXID_MyLevel      ,   ON  , 0   , ""   , ""   },
     }
