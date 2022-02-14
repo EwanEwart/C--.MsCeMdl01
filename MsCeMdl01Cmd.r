@@ -59,27 +59,27 @@ followed by a command table identifier.
 
 The -- command table -- is a -- dynamic array --.
 
-Each row in the array
+Each -- row -- in the array
 defines the keywords
 and related information
 available for this level of command.
 
-Each row in the command table
-consists of at least five columns.
+Each -- row -- in the command table
+consists of -- at least five columns --.
 More columns will be used later:
 
-- the first  column is the -- index -- value,
-- the second column is the -- subtable -- identifier,
-- the third  column is the command -- category --,
-- the fourth column is the command -- option -- and
-- the fifth  column is the type command keyword.
+1. the first  column is the -- index -- value,
+2. the second column is the -- subtable -- identifier,
+3. the third  column is the command -- category --,
+4. the fourth column is the command -- option -- and
+5. the fifth  column is the type command keyword.
 
-The -- index -- value constitutes
+1. The -- index -- value constitutes
 the value of the final command number.
 
-The command -- category -- is defined in cmdclass.rh.
+3. The command -- category -- is defined in cmdclass.rh.
 
-The command options include ...
+4. The command options include ...
 NONE,
 REQ abbreviation of Required
 DEF abbreviation of Default
