@@ -4,3 +4,4 @@
 #define CMD_MSCEMDL01_CREATE_COMPLEXSHAPE                  0x0101020000000000UI64   /* PLACEMENT       CmdString =   2 */
 #define CMD_MSCEMDL01_CREATE_PROJECTEDSOLID                0x0101030000000000UI64   /* PLACEMENT       CmdString =   3 */
 #define CMD_MSCEMDL01_CREATE_BSPLINESURFACE                0x0101040000000000UI64   /* PLACEMENT       CmdString =   4, ItemListRscId =   1 */
+#define CMD_MSCEMDL01_CREATE_CATENARY                      0x0101050000000000UI64   /* PLACEMENT       CmdString =   5 */

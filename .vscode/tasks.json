@@ -6,7 +6,7 @@
             "type": "shell",
             // "command": "bmake +a MsCeMdl01.mke",
             "command": "bmake",
-			"args": ["+a","MsCeMdl01.mke"],
+			"args": ["-a","MsCeMdl01.mke", "-ddebug"],
             "group": {
                 "kind": "build",
                 "isDefault": true

@@ -48,22 +48,25 @@ void createALine(DPoint3dCR basePt);
 void createAComplexShape(DPoint3dCR basePt);
 void createAProjectedSolid(DPoint3dCR basePt);
 void createABsplineSurface(DPoint3dCR basePt);
+void createCatenary(DPoint3dCR basePt);
 
 void createALine(WCharCP unparsed);
 void createAComplexShape(WCharCP unparsed);
 void createAProjectedSolid(WCharCP unparsed);
 void createABsplineSurface(WCharCP unparsed);
+void createCatenary(WCharCP unparsed);
 
 MdlCommandNumber cmdNums[] =
-    {
-        {(CmdHandler)createALine, CMD_MSCEMDL01_CREATE_LINE},
-        {(CmdHandler)createAComplexShape, CMD_MSCEMDL01_CREATE_COMPLEXSHAPE},
-        {(CmdHandler)createAProjectedSolid, CMD_MSCEMDL01_CREATE_PROJECTEDSOLID},
-        {(CmdHandler)createABsplineSurface, CMD_MSCEMDL01_CREATE_BSPLINESURFACE},
-        0};
+{
+    {(CmdHandler)createALine, CMD_MSCEMDL01_CREATE_LINE},
+    {(CmdHandler)createAComplexShape, CMD_MSCEMDL01_CREATE_COMPLEXSHAPE},
+    {(CmdHandler)createAProjectedSolid, CMD_MSCEMDL01_CREATE_PROJECTEDSOLID},
+    {(CmdHandler)createABsplineSurface, CMD_MSCEMDL01_CREATE_BSPLINESURFACE},
+    {(CmdHandler)createCatenary, CMD_MSCEMDL01_CREATE_CATENARY},
+    0 };
 
 // UI
-void myLevel_comboHook(DialogItemMessage *dimP);
+void myLevel_comboHook(DialogItemMessage* dimP);
 DialogHookInfo uHooks[] = {
     {HOOKITEMID_MyLevelCombo, (PFDialogHook)myLevel_comboHook},
 };
@@ -121,8 +124,8 @@ extern "C" DLLEXPORT void MdlMain(int argc, WCharCP argv[])
     // UI Publish hook
     mdlDialog_hookPublish(sizeof(uHooks) / sizeof(DialogHookInfo), uHooks);
 
-    SymbolSet *setP = mdlCExpression_initializeSet(VISIBILITY_DIALOG_BOX, 0, 0);
-    mdlDialog_publishComplexVariable(setP, "mscemdl01info", "g_mscemdl01", &g_MsCeMdl01);
+    SymbolSet* setP = mdlCExpression_initializeSet(VISIBILITY_DIALOG_BOX, 0, 0);
+    mdlDialog_publishComplexVariable(setP, const_cast<char*>("mscemdl01info"), const_cast<char*>("g_mscemdl01"), &g_MsCeMdl01);
     g_MsCeMdl01.baseArcRadius = 5000;
     strcpy_s(g_MsCeMdl01.levelName, 512, "Default");
 
@@ -151,15 +154,38 @@ extern "C" DLLEXPORT void MdlMain(int argc, WCharCP argv[])
 
 } // MdlMain
 
+void createCatenary(DPoint3dCR basePt)
+{
+    EditElementHandle eeh{};
+    DPoint3dCR p1{ 0,100,0 };
+    DPoint3dCR p2{ 100,100,0 };
+    DPoint3dCR p3{ 50,10,0 };
+    ICurvePrimitivePtr pCurve = ICurvePrimitive::CreateXYCatenaryPointPointPoint(p1, p2, p3);
+    DraftingElementSchema::ToElement
+    (
+        eeh
+        , *pCurve
+        , nullptr
+        , ACTIVEMODEL->Is3d()
+        , *ACTIVEMODEL
+    );
+    eeh.AddToModel();
+}
 void createALine(DPoint3dCR basePt)
 {
     EditElementHandle eeh;
 
-    DSegment3d seg;
-    seg.Init(basePt, DPoint3d::From(basePt.x + g_1mu * 2, basePt.y + g_1mu));
-    ICurvePrimitivePtr pCurve = ICurvePrimitive::CreateLine(seg);
-    DraftingElementSchema::ToElement(
-        eeh, *pCurve, nullptr, ACTIVEMODEL->Is3d(), *ACTIVEMODEL);
+    DSegment3d lineSegment{};
+    lineSegment.Init(basePt, DPoint3d::From(basePt.x + g_1mu * 2, basePt.y + g_1mu));
+    auto pCurve = ICurvePrimitive::CreateLine(lineSegment);
+    DraftingElementSchema::ToElement
+    (
+        eeh
+        , *pCurve
+        , nullptr
+        , ACTIVEMODEL->Is3d()
+        , *ACTIVEMODEL
+    );
     eeh.AddToModel();
 }
 void createAComplexShape(DPoint3dCR basePt)
@@ -230,23 +256,23 @@ void createABsplineSurface(DPoint3dCR basePt)
 
     MSBsplineCurve bsCurves[4];
 
-    DPoint3d center[4];
+    DPoint3d centre[4];
 
     RotMatrix rMatrix[4];
 
     double radius = g_1mu / 2;
 
-    center[0] = center[1] = center[2] = center[3] = basePt;
+    centre[0] = centre[1] = centre[2] = centre[3] = basePt;
 
-    center[0].x += radius;
+    centre[0].x += radius;
 
-    center[1].x += g_1mu;
-    center[1].y += radius;
+    centre[1].x += g_1mu;
+    centre[1].y += radius;
 
-    center[2].x += radius;
-    center[2].y += g_1mu;
+    centre[2].x += radius;
+    centre[2].y += g_1mu;
 
-    center[3].y += radius;
+    centre[3].y += radius;
 
     DVec3d xVec = DVec3d::From(1, 0, 0), negativeXVec = DVec3d::From(-1, 0, 0);
 
@@ -267,7 +293,7 @@ void createABsplineSurface(DPoint3dCR basePt)
     for (int i = 0; i < 4; i++)
     {
 
-        bsCurves[i].InitEllipticArc(center[i], radius, radius, 0, PI, &rMatrix[i]);
+        bsCurves[i].InitEllipticArc(centre[i], radius, radius, 0, PI, &rMatrix[i]);
     }
 
     if (SUCCESS == mdlBspline_coonsPatch(&bsSurface, bsCurves))
@@ -285,19 +311,230 @@ void createABsplineSurface(DPoint3dCR basePt)
         mdlBspline_freeCurve(&bsCurves[i]);
     }
 }
+void createCatenary(WCharCP unparsed)
+{
+    // DPoint3d basePt{ DPoint3d::FromZero() };
+
+    // DPoint3dCR p1{ g_1mu * -2.0, g_1mu * 3.76 };
+    // DPoint3dCR p2{ g_1mu * 0.0, g_1mu * 1.00 };
+    // DPoint3dCR p3{ g_1mu * 2.0, g_1mu * 3.76 };
+
+    // auto targetLength {5.0};
+
+    // auto pCurve{ ICurvePrimitive::CreateXYCatenaryPointPointPoint(p1, p2, p3) };
+    // auto pCurve{ ICurvePrimitive::CreateXYCatenaryPointPointLength(p1, p2, targetLength) };
+    auto pCurve{ ICurvePrimitive::CreateXYCatenaryPointCoefficientSignedXLimits ({0.0,0.0}, 0.5, -5.0,5.0) };
+    assert(pCurve != nullptr);
+
+    EditElementHandle eeh;
+    assert(Bentley::SUCCESS == DraftingElementSchema::ToElement
+    (
+        /**/  eeh
+        /**/, *pCurve
+        /**/, nullptr
+        /**/, ACTIVEMODEL->Is3d()
+        /**/, *ACTIVEMODEL
+    )
+    );
+    assert(Bentley::SUCCESS == eeh.AddToModel());
+}
 void createALine(WCharCP unparsed)
 {
-    DPoint3d basePt = DPoint3d::FromZero();
-    EditElementHandle eeh;
-    DSegment3d seg;
+    // //////////////////
+    // CreateLine
+    auto basePt{ DPoint3d::FromZero() };
+    basePt.Add({ g_1mu * 1,g_1mu * 1 }); // MicroStation Units: (1,1)
 
-    seg.Init(basePt, DPoint3d::From(basePt.x + g_1mu * 2, basePt.y + g_1mu));
+    DSegment3d lineSegment; // detail data
+    lineSegment.Init(basePt, DPoint3d::From(basePt.x + g_1mu * 2, basePt.y + g_1mu * 1));
 
-    ICurvePrimitivePtr pCurve = ICurvePrimitive::CreateLine(seg);
+    auto curvePrimitivePtr_LineSegment{ ICurvePrimitive::CreateLine(lineSegment) };
+    assert(curvePrimitivePtr_LineSegment != nullptr);
 
-    DraftingElementSchema::ToElement(eeh, *pCurve, nullptr, ACTIVEMODEL->Is3d(), *ACTIVEMODEL);
+    EditElementHandle eeh_LineSegment;
+    assert(Bentley::SUCCESS == DraftingElementSchema::ToElement(eeh_LineSegment, *curvePrimitivePtr_LineSegment, nullptr, ACTIVEMODEL->Is3d(), *ACTIVEMODEL));
+    assert(Bentley::SUCCESS == eeh_LineSegment.AddToModel());
 
-    eeh.AddToModel();
+    // //////////////////
+    // CreateLineString
+    DPoint3d points_LineString[]
+    {
+        /**/  {  1 * g_1mu, 1 * g_1mu }
+        /**/, {  2 * g_1mu, 2 * g_1mu }
+        /**/, {  3 * g_1mu, 1 * g_1mu }
+        /**/, {  4 * g_1mu, 2 * g_1mu }
+        /**/, {  5 * g_1mu, 1 * g_1mu }
+        /**/, {  6 * g_1mu, 2 * g_1mu }
+        /**/, {  7 * g_1mu, 1 * g_1mu }
+        /**/, {  8 * g_1mu, 2 * g_1mu }
+        /**/, {  9 * g_1mu, 1 * g_1mu }
+        /**/, { 10 * g_1mu, 2 * g_1mu }
+        /**/, { 11 * g_1mu, 1 * g_1mu }
+        /**/, { 12 * g_1mu, 2 * g_1mu }
+        /**/, { 13 * g_1mu, 1 * g_1mu }
+        /**/, { 14 * g_1mu, 2 * g_1mu }
+        /**/, { 15 * g_1mu, 1 * g_1mu }
+        /**/, { 16 * g_1mu, 2 * g_1mu }
+        /**/, { 17 * g_1mu, 1 * g_1mu }
+        /**/, { 18 * g_1mu, 2 * g_1mu }
+        /**/, { 19 * g_1mu, 1 * g_1mu }
+        /**/, { 20 * g_1mu, 2 * g_1mu }
+    };
+    auto npoints_LineString{ sizeof(points_LineString) / sizeof(DPoint3d) };
+    auto curvePrimitivePtr_LineString{ ICurvePrimitive::CreateLineString(points_LineString,npoints_LineString) };
+    assert(curvePrimitivePtr_LineString != nullptr);
+    EditElementHandle eeh_LineString;
+    assert(Bentley::SUCCESS == DraftingElementSchema::ToElement(eeh_LineString, *curvePrimitivePtr_LineString, nullptr, ACTIVEMODEL->Is3d(), *ACTIVEMODEL));
+    assert(Bentley::SUCCESS == eeh_LineString.AddToModel());
+
+    // /////////////////////////
+    // CreatePointString
+    DPoint3d points_PointString[]
+    {
+        /**/  {  1.5 * g_1mu, 1.5 * g_1mu }
+        /**/, {  2.5 * g_1mu, 2.5 * g_1mu }
+        /**/, {  3.5 * g_1mu, 1.5 * g_1mu }
+        /**/, {  4.5 * g_1mu, 2.5 * g_1mu }
+        /**/, {  5.5 * g_1mu, 1.5 * g_1mu }
+        /**/, {  6.5 * g_1mu, 2.5 * g_1mu }
+        /**/, {  7.5 * g_1mu, 1.5 * g_1mu }
+        /**/, {  8.5 * g_1mu, 2.5 * g_1mu }
+        /**/, {  9.5 * g_1mu, 1.5 * g_1mu }
+        /**/, { 10.5 * g_1mu, 2.5 * g_1mu }
+        /**/, { 11.5 * g_1mu, 1.5 * g_1mu }
+        /**/, { 12.5 * g_1mu, 2.5 * g_1mu }
+        /**/, { 13.5 * g_1mu, 1.5 * g_1mu }
+        /**/, { 14.5 * g_1mu, 2.5 * g_1mu }
+        /**/, { 15.5 * g_1mu, 1.5 * g_1mu }
+        /**/, { 16.5 * g_1mu, 2.5 * g_1mu }
+        /**/, { 17.5 * g_1mu, 1.5 * g_1mu }
+        /**/, { 18.5 * g_1mu, 2.5 * g_1mu }
+        /**/, { 19.5 * g_1mu, 1.5 * g_1mu }
+        /**/, { 20.5 * g_1mu, 2.5 * g_1mu }
+    };
+    auto npoints_PointString{ sizeof(points_PointString) / sizeof(DPoint3d) };
+    auto curvePrimitivePtr_PointString{ ICurvePrimitive::CreatePointString(points_PointString, npoints_PointString) };
+    assert(curvePrimitivePtr_PointString != nullptr);
+    EditElementHandle eeh_PointString;
+    assert(Bentley::SUCCESS == DraftingElementSchema::ToElement(eeh_PointString, *curvePrimitivePtr_PointString, nullptr, ACTIVEMODEL->Is3d(), *ACTIVEMODEL));
+    assert(Bentley::SUCCESS == eeh_PointString.AddToModel());
+
+    // /////////////////////////
+    // CreatePointString using bvector
+    bvector<DPoint3d> points_PointString_bvector
+    {
+        /**/  { (1.5 + 1) * g_1mu, (1.5 + 1) * g_1mu }
+        /**/, { (2.5 + 1) * g_1mu, (2.5 + 1) * g_1mu }
+        /**/, { (3.5 + 1) * g_1mu, (1.5 + 1) * g_1mu }
+        /**/, { (4.5 + 1) * g_1mu, (2.5 + 1) * g_1mu }
+        /**/, { (5.5 + 1) * g_1mu, (1.5 + 1) * g_1mu }
+        /**/, { (6.5 + 1) * g_1mu, (2.5 + 1) * g_1mu }
+        /**/, { (7.5 + 1) * g_1mu, (1.5 + 1) * g_1mu }
+        /**/, { (8.5 + 1) * g_1mu, (2.5 + 1) * g_1mu }
+        /**/, { (9.5 + 1) * g_1mu, (1.5 + 1) * g_1mu }
+        /**/, { (10.5 + 1) * g_1mu, (2.5 + 1) * g_1mu }
+        /**/, { (11.5 + 1) * g_1mu, (1.5 + 1) * g_1mu }
+        /**/, { (12.5 + 1) * g_1mu, (2.5 + 1) * g_1mu }
+        /**/, { (13.5 + 1) * g_1mu, (1.5 + 1) * g_1mu }
+        /**/, { (14.5 + 1) * g_1mu, (2.5 + 1) * g_1mu }
+        /**/, { (15.5 + 1) * g_1mu, (1.5 + 1) * g_1mu }
+        /**/, { (16.5 + 1) * g_1mu, (2.5 + 1) * g_1mu }
+        /**/, { (17.5 + 1) * g_1mu, (1.5 + 1) * g_1mu }
+        /**/, { (18.5 + 1) * g_1mu, (2.5 + 1) * g_1mu }
+        /**/, { (19.5 + 1) * g_1mu, (1.5 + 1) * g_1mu }
+        /**/, { (20.5 + 1) * g_1mu, (2.5 + 1) * g_1mu }
+    };
+    auto curvePrimitivePtr_PointString_bvector{ ICurvePrimitive::CreatePointString(points_PointString_bvector) };
+    EditElementHandle eeh_PointString_bVector;
+    assert(Bentley::SUCCESS == DraftingElementSchema::ToElement(eeh_PointString_bVector, *curvePrimitivePtr_PointString_bvector, nullptr, ACTIVEMODEL->Is3d(), *ACTIVEMODEL));
+    assert(Bentley::SUCCESS == eeh_PointString_bVector.AddToModel());
+
+
+    // /////////////////////////
+    // CreateBsplineCurve
+    // MSBsplineCurvePtr anMSBsplineCurvePtr{};
+    // auto curvePrimitivePtr_BsplineCurve{ ICurvePrimitive::CreateBsplineCurve(anMSBsplineCurvePtr) };
+    // EditElementHandle eeh_BSplineCurve;
+    // assert(Bentley::SUCCESS == DraftingElementSchema::ToElement(eeh_BSplineCurve, *curvePrimitivePtr_BsplineCurve, nullptr, ACTIVEMODEL->Is3d(), *ACTIVEMODEL));
+    // assert(Bentley::SUCCESS == eeh_BSplineCurve.AddToModel());
+
+    ////////////////////////////
+    ////////////
+    // auto status=CurveHandler::CreateCurveElement(eeh, NULL, m_pnts, size, false, *ACTIVEMODEL->AsDgnModelP());
+    DPoint3d points_CreateCurveElement[] // Mininmum six necessary ?
+    {
+        /*
+        ( SLK1 Station Seilaufhaengepunkt (links)  [m]  /  SLK1 Hoehe Seilaufhaengepunkt (links) [m]    ) = ( -1.63, 148.89)
+        ( SLK2 Station Seilpunkt (Feldmitte)       [m]  /  SLK2 Hoehe Seilpunkt (Feldmitte) [m]         ) = (184.26, 139.48)
+        ( SLK1 Station Seilaufhaengepunkt (rechts) [m]  /  SLK1 Hoehe Seilaufhaengepunkt (rechts) [m]   ) = (370.15, 152.77)
+        */
+        
+        /**/  { -120.00 * g_1mu,   166.712  * g_1mu } // t1
+        /**/, { -100.00 * g_1mu,   163.054  * g_1mu } // t2
+        /**/, {   -1.63 * g_1mu,   148.89   * g_1mu } // 1. obligatory point
+        /**/, {  184.26 * g_1mu,   139.48   * g_1mu } // 2. obligatory point
+        /**/, {  370.15 * g_1mu,   152.77   * g_1mu } // 3. obligatory point
+        /**/, {  450.00 * g_1mu,   165.449  * g_1mu } // t2
+        /**/, {  500.00 * g_1mu,   175.52   * g_1mu } // t2
+
+        // /**/  { -7.0 * g_1mu,   1.14286  * g_1mu } // t1
+        // /**/, { -6.0 * g_1mu,   1.71429  * g_1mu } // t2
+        // /**/, { -5.0 * g_1mu,   2.0      * g_1mu } // 1. obligatory point
+        // /**/, { -4.0 * g_1mu,   2.0      * g_1mu } // 2. obligatory point
+        // /**/, { -3.0 * g_1mu,   1.71429  * g_1mu }
+        // /**/, { -2.0 * g_1mu,   1.14286  * g_1mu }
+        // /**/, { -1.0 * g_1mu,   0.285714 * g_1mu } 
+        // /**/, {  0.0 * g_1mu,  -0.857143 * g_1mu } 
+        // /**/, {  2.0 * g_1mu,  -4.0      * g_1mu } // 3. obligatory point
+        // /**/, {  3.0 * g_1mu,  -6.0      * g_1mu }
+        // /**/, {  4.0 * g_1mu,  -8.28571  * g_1mu }
+        // /**/, {  5.0 * g_1mu, -10.8571   * g_1mu }
+        // /**/, {  6.0 * g_1mu, -13.7143   * g_1mu } // t2
+        // /**/, {  7.0 * g_1mu, -16.8571   * g_1mu } // t2
+
+        // /**/  { (1.5 + 1) * g_1mu, (1.5 + 1) * g_1mu } // t
+        // /**/, { (2.5 + 1) * g_1mu, (2.5 + 1) * g_1mu } // t
+        // /**/, { (3.5 + 1) * g_1mu, (1.5 + 1) * g_1mu }
+        // /**/, { (4.5 + 1) * g_1mu, (2.5 + 1) * g_1mu }
+        // /**/, { (5.5 + 1) * g_1mu, (1.5 + 1) * g_1mu }
+        // /**/, { (6.5 + 1) * g_1mu, (2.5 + 1) * g_1mu }
+        // /**/, { (7.5 + 1) * g_1mu, (1.5 + 1) * g_1mu }
+        // /**/, { (8.5 + 1) * g_1mu, (2.5 + 1) * g_1mu }
+        // /**/, { (9.5 + 1) * g_1mu, (1.5 + 1) * g_1mu }
+        // /**/, { (10.5 + 1) * g_1mu, (2.5 + 1) * g_1mu }
+        // /**/, { (11.5 + 1) * g_1mu, (1.5 + 1) * g_1mu }
+        // /**/, { (12.5 + 1) * g_1mu, (2.5 + 1) * g_1mu }
+        // /**/, { (13.5 + 1) * g_1mu, (1.5 + 1) * g_1mu }
+        // /**/, { (14.5 + 1) * g_1mu, (2.5 + 1) * g_1mu }
+        // /**/, { (15.5 + 1) * g_1mu, (1.5 + 1) * g_1mu }
+        // /**/, { (16.5 + 1) * g_1mu, (2.5 + 1) * g_1mu }
+        // /**/, { (17.5 + 1) * g_1mu, (1.5 + 1) * g_1mu }
+        // /**/, { (18.5 + 1) * g_1mu, (2.5 + 1) * g_1mu }
+        // /**/, { (19.5 + 1) * g_1mu, (1.5 + 1) * g_1mu } // t2
+        // /**/, { (20.5 + 1) * g_1mu, (2.5 + 1) * g_1mu } // t2
+    };
+    auto npoints_CreateCurveElement{ sizeof(points_CreateCurveElement) / sizeof(DPoint3d) };
+    
+    EditElementHandle eeh_CreateCurveElement;
+    auto status=CurveHandler::CreateCurveElement
+    (
+        /**/  eeh_CreateCurveElement        // the new element
+        /**/, nullptr                       // Template element to use for symbology; if NULL defaults are used. 
+        /* 
+            curve points. 
+            numVerts must be: 6 <= numVerts <=MAX_VERTICES. 
+            The first 2 points and last 2 points control the end tangents 
+        */
+        /**/, points_CreateCurveElement     
+        /**/, npoints_CreateCurveElement    // number of curve points
+        /**/, ACTIVEMODEL->Is3d()           // Initialise the 2d or 3d element structure, typically modelRef->Is3d (). 
+        /**/, *ACTIVEMODEL                  // Model to associate this element with. Required to compute range.
+    );
+    assert(Bentley::SUCCESS == status);
+
+    // assert(Bentley::SUCCESS == DraftingElementSchema::ToElement(eeh_CreateCurveElement, *curvePrimitivePtr_PointString, nullptr, ACTIVEMODEL->Is3d(), *ACTIVEMODEL));
+    assert(Bentley::SUCCESS == eeh_CreateCurveElement.AddToModel());
+
 }
 
 void createAComplexShape(WCharCP unparsed)
@@ -325,6 +562,7 @@ void createAComplexShape(WCharCP unparsed)
     DEllipse3d arcPts = DEllipse3d::FromPointsOnArc(pts[2], pts[1], pts[0]);
 
     CurveVectorPtr pCurveVec = CurveVector::Create(CurveVector::BOUNDARY_TYPE_Outer);
+    assert(pCurveVec != nullptr);
 
     pCurveVec->Add(ICurvePrimitive::CreateArc(arcPts));
 
@@ -333,9 +571,9 @@ void createAComplexShape(WCharCP unparsed)
 
     pCurveVec->Add(ICurvePrimitive::CreateLineString(pts, 3));
 
-    DraftingElementSchema::ToElement(eeh, *pCurveVec, nullptr, ACTIVEMODEL->Is3d(), *ACTIVEMODEL);
+    assert(Bentley::SUCCESS == DraftingElementSchema::ToElement(eeh, *pCurveVec, nullptr, ACTIVEMODEL->Is3d(), *ACTIVEMODEL));
 
-    eeh.AddToModel();
+    assert(Bentley::SUCCESS == eeh.AddToModel());
 }
 
 void createAProjectedSolid(WCharCP unparsed)
@@ -371,12 +609,13 @@ void createAProjectedSolid(WCharCP unparsed)
     DgnExtrusionDetail data(pCurveVec, extrusionVec, true);
 
     ISolidPrimitivePtr pSolid = ISolidPrimitive::CreateDgnExtrusion(data);
+    assert(pSolid != nullptr);
 
     EditElementHandle eeh;
 
-    DraftingElementSchema::ToElement(eeh, *pSolid, nullptr, *ACTIVEMODEL);
+    assert(Bentley::SUCCESS == DraftingElementSchema::ToElement(eeh, *pSolid, nullptr, *ACTIVEMODEL));
 
-    eeh.AddToModel();
+    assert(Bentley::SUCCESS == eeh.AddToModel());
 }
 
 // void createABsplineSurface(WCharCP unparsed)
@@ -456,14 +695,41 @@ void createAProjectedSolid(WCharCP unparsed)
 
 void createABsplineSurface(WCharCP unparsed)
 {
-    auto pTool{new PlaceBsSurfaceTool(CMDNAME_PlaceBsSurfaceTool, PROMPT_PlaceBsSurfaceTool)};
+    auto pTool{ new PlaceBsSurfaceTool(CMDNAME_PlaceBsSurfaceTool, PROMPT_PlaceBsSurfaceTool) };
     pTool->InstallTool();
 }
 
+// to do
+void createABspline(WCharCP unparsed) {
+    /*
+    formular editor:
+    cubic Bezier curve, t in [0,1]
+    (can only have 40 chars per line, therefore split up sum)
+    x1 = 110 * (1-t) * (1-t) * (1-t) ;
+    y1 = 150 * (1-t) * (1-t) * (1-t) ; 
+    x2 =  25 * 3 * (1-t) * (1-t) * t ;
+    y2 = 190 * 3 * (1-t) * (1-t) * t ;
+    x3 = 210 * 3 * (1-t) * t * t ;
+    y3 = 250 * 3 * (1-t) * t * t ;
+    x4 = 210 * t * t * t ;
+    y4 =   30 *  t * t * t ;
+    x = ( x1 + x2 + x3 + x4 ) ;
+    y = -( y1 + y2 + y3 + y4 ) ;
+
+    */
+}
+
+
+// void createCatenary(WCharCP unparsed)
+// {
+//     auto pTool{ new PlaceBsSurfaceTool(CMDNAME_PlaceCatenaryTool, PROMPT_PlaceCatenaryTool) };
+//     pTool->InstallTool();
+// }
+
 // EE: UI
-void myLevel_comboHook(DialogItemMessage *dimP)
+void myLevel_comboHook(DialogItemMessage* dimP)
 {
-    RawItemHdr *riP = dimP->dialogItemP->rawItemP;
+    RawItemHdr* riP = dimP->dialogItemP->rawItemP;
 
     dimP->msgUnderstood = TRUE;
     switch (dimP->messageType)

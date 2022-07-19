@@ -34,6 +34,7 @@ CommandTable   CT_CREATE =
     { 2,  CT_NONE   , INHERIT   ,   NONE    , "ComplexShape"    , CMDNAME_PlaceComplexShape                                 },
     { 3,  CT_NONE   , INHERIT   ,   NONE    , "ProjectedSolid"  , CMDNAME_PlaceProjectedSolid                               },
     { 4,  CT_NONE   , INHERIT   ,   NONE    , "BsplineSurface"  , CMDNAME_PlaceBsSurfaceTool    ,   ItemList_BsplineSurface },
+    { 5,  CT_NONE   , INHERIT   ,   NONE    , "Catenary"        , CMDNAME_PlaceCatenaryTool                                 },
 };
 
 /*

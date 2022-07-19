@@ -18,7 +18,7 @@ Chapter 6: [Implementing Interactive tools using DgnTools Class](https://communi
 
 Chapter 7: [Adding User Interface to a MDL Application](https://communities.bentley.com/products/programming/microstation_programming/w/wiki/52143/adding-user-interface-to-a-mdl-application)
 
-Chapter 8: [Launching applications through the customized interface](https://communities.bentley.com/products/programming/microstation_programming/w/wiki/52144/launching-applications-through-the-customized-interface)
+Chapter 8: [Launching applications through the customised interface](https://communities.bentley.com/products/programming/microstation_programming/w/wiki/52144/launching-applications-through-the-customized-interface)
 
 
 ## Chapter 0: Introduction and Prerequisites
@@ -146,7 +146,7 @@ Copy and paste the following content into a file called
 
 MsCeMdl01.mke 
 
-and save it under /dev/C++.MsCeMdl01. 
+and save it under /dev/C++.MsCeMdl01
 
 This file is the control file for generating the project. 
 
@@ -174,7 +174,7 @@ and then type
 
 bmake -a 
 
-to generate MsCeMdl01.ma and MsCeMdl01.dll. 
+to generate MsCeMdl01.ma and MsCeMdl01.dll 
 
 These generated files are located 
 in the …\MicroStation\mdlapps directory.

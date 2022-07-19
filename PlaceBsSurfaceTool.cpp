@@ -17,45 +17,48 @@ extern MsCeMdl01Info g_MsCeMdl01;
 
  +===============+===============+===============+===============+===============+======*/
 
-/*
-Implement a Base Spline Surface Tool:
-*/
+ /*
+ Implement a Base Spline Surface Tool:
+ */
 
-/* paramters
-1. tool id
-2. tool tip id
-Ids correspond to specific strings in the message list of the resource file.
-Facilitate the internationalisation of the software.
-When you want to change the software to another language,
-you only need to change the resource file,
-and the source code file does not need to be modified.
-*/
+ /* paramters
+ 1. tool id
+ 2. tool tip id
+ Ids correspond to specific strings in the message list of the resource file.
+ Facilitate the internationalisation of the software.
+ When you want to change the software to another language,
+ you only need to change the resource file,
+ and the source code file does not need to be modified.
+ */
 PlaceBsSurfaceTool::PlaceBsSurfaceTool(int toolId, int promptId)
     : DgnPrimitiveTool(toolId, promptId)
 {
 }
 
-bool PlaceBsSurfaceTool::CreateBsSurface(
-    EditElementHandleR eeh, // -> edit element handle returned here
-    DPoint3dCP pBasePt)
+bool PlaceBsSurfaceTool::CreateBsSurface
+(
+    // -> edit element handle returned here
+    /**/  EditElementHandleR eeh
+    /**/, DPoint3dCP pBasePt
+)
 {
 
     MSBsplineSurface bsSurface;
     MSBsplineCurve bsCurves[4];
-    DPoint3d center[4];
+    DPoint3d centre[4];
     RotMatrix rMatrix[4];
     // double radius = g_1mu / 2; //EE-: UI
     double radius = g_MsCeMdl01.baseArcRadius;
 
     std::cout << "--- Radius: " << radius << std::endl;
 
-    center[0] = center[1] = center[2] = center[3] = *pBasePt;
-    center[0].x += radius;
-    center[1].x += g_1mu;
-    center[1].y += radius;
-    center[2].x += radius;
-    center[2].y += g_1mu;
-    center[3].y += radius;
+    centre[0] = centre[1] = centre[2] = centre[3] = *pBasePt;
+    centre[0].x += radius;
+    centre[1].x += g_1mu;
+    centre[1].y += radius;
+    centre[2].x += radius;
+    centre[2].y += g_1mu;
+    centre[3].y += radius;
 
     DVec3d xVec = DVec3d::From(1, 0, 0), negativeXVec = DVec3d::From(-1, 0, 0);
     DVec3d yVec = DVec3d::From(0, 1, 0), negativeYVec = DVec3d::From(0, -1, 0);
@@ -68,7 +71,7 @@ bool PlaceBsSurfaceTool::CreateBsSurface(
 
     for (int i = 0; i < 4; i++)
     {
-        bsCurves[i].InitEllipticArc(center[i], radius, radius, 0, PI, &rMatrix[i]);
+        bsCurves[i].InitEllipticArc(centre[i], radius, radius, 0, PI, &rMatrix[i]);
     }
 
     if (SUCCESS != mdlBspline_coonsPatch(&bsSurface, bsCurves))
@@ -115,7 +118,7 @@ interrupts the current tool
 */
 void PlaceBsSurfaceTool::_OnRestartTool()
 {
-    auto pTool{new PlaceBsSurfaceTool(GetToolId(), GetToolPrompt())};
+    auto pTool{ new PlaceBsSurfaceTool(GetToolId(), GetToolPrompt()) };
     /*
     Call to
     make this tool instance
