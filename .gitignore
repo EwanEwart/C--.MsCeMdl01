@@ -1,1 +1,7 @@
+# compiler build files
+x64/
+# visual studio hidden files
+.vs/
+.vs/C++.MsCeMdl01/v16/.suo
 .vs/C++.MsCeMdl01/v16/Browse.VC.db
+*.ipch
