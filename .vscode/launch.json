@@ -12,10 +12,10 @@
             // "program": "D:/ProgramFiles/Bentley/MicroStationCONNECTEdition/MicroStation/microstation.exe",
             "program": "microstation.exe",
             "args": [
-                "-wsMS_CULTURE=en",
-                // "D:/Projects/Tutorial/WorkSpaces/Introduction/WorkSets/Lesson.01/dgn/empty.2D.dgn",
-                // "D:/ProgramData/Bentley/MicroStationCONNECTEdition/Configuration/WorkSpaces/XXX/WorkSets/AAA/dgn/draw_3D_01.dgn",
-                "C:/ProgramData/Bentley/MicroStation CONNECT Edition/Configuration/WorkSpaces/Example/WorkSets/MetroStation/DGN/sandpit.3D.Metric.Design.01.dgn",
+                "-wsMS_CULTURE=en"
+                // ,"D:/Projects/Tutorial/WorkSpaces/Introduction/WorkSets/Lesson.01/dgn/empty.2D.dgn",
+                // ,"D:/ProgramData/Bentley/MicroStationCONNECTEdition/Configuration/WorkSpaces/XXX/WorkSets/AAA/dgn/draw_3D_01.dgn",
+                // , "C:/ProgramData/Bentley/MicroStation CONNECT Edition/Configuration/WorkSpaces/Example/WorkSets/MetroStation/DGN/sandpit.3D.Metric.Design.01.dgn",
 			],
             "stopAtEntry": false,
             "cwd": "${fileDirname}",

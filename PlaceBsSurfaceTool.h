@@ -1,5 +1,4 @@
-#ifndef PLACE_BS_SURFACE_TOOL
-#define PLACE_BS_SURFACE_TOOL
+#pragma once
 
 #undef __EDG__ // EE Bentley
 
@@ -30,5 +29,3 @@ struct PlaceBsSurfaceTool : DgnPrimitiveTool
     virtual bool _OnDataButton(DgnButtonEventCR ev) override;
     virtual bool _OnResetButton(DgnButtonEventCR ev) override;
 };
-
-#endif // PLACE_BS_SURFACE_TOOL

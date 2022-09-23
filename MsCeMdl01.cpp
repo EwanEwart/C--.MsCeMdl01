@@ -1,5 +1,7 @@
 #undef __EDG__ // EE Bentley
 
+#include <windows.h> // SetConsoleOutputCP
+
 #include <iostream> //EE
 #include <string>   //EE
 using namespace std;
@@ -11,12 +13,20 @@ using namespace std;
 #include "PlaceBsSurfaceTool.h"
 #include "MsCeMdl01.h"
 #include <Bentley/WString.h> //EE+
+#include <Bentley/BeStringUtilities.h> //EE++
+
+#include "SlcFileConvert.h"
+
 // #include <Mstn/MdlApi/msmfc.h>         //EE MFC
 
 // No ; needed
 USING_NAMESPACE_BENTLEY_DGNPLATFORM
 USING_NAMESPACE_BENTLEY_MSTNPLATFORM
 USING_NAMESPACE_BENTLEY_MSTNPLATFORM_ELEMENT
+
+#include <string>
+#include <codecvt>
+#include <locale>
 
 /*
 Because the default unit in MDL is
@@ -49,15 +59,42 @@ void createAProjectedSolid(WCharCP unparsed);
 void createABsplineSurface(WCharCP unparsed);
 
 MdlCommandNumber cmdNums[] =
-    {
-        {(CmdHandler)createALine, CMD_MSCEMDL01_CREATE_LINE},
-        {(CmdHandler)createAComplexShape, CMD_MSCEMDL01_CREATE_COMPLEXSHAPE},
-        {(CmdHandler)createAProjectedSolid, CMD_MSCEMDL01_CREATE_PROJECTEDSOLID},
-        {(CmdHandler)createABsplineSurface, CMD_MSCEMDL01_CREATE_BSPLINESURFACE},
-        0};
+{
+    {(CmdHandler)createALine, CMD_MSCEMDL01_CREATE_LINE},
+    {(CmdHandler)createAComplexShape, CMD_MSCEMDL01_CREATE_COMPLEXSHAPE},
+    {(CmdHandler)createAProjectedSolid, CMD_MSCEMDL01_CREATE_PROJECTEDSOLID},
+    {(CmdHandler)createABsplineSurface, CMD_MSCEMDL01_CREATE_BSPLINESURFACE},
+    0
+};
+
+using convert_t = std::codecvt_utf8<wchar_t>;
+std::wstring_convert<convert_t, wchar_t> strconverter;
+
+std::string ws2s(std::wstring wstr)
+{
+    return strconverter.to_bytes(wstr);
+}
+
+std::wstring s2ws(std::string str)
+{
+    return strconverter.from_bytes(str);
+}
 
 extern "C" DLLEXPORT void MdlMain(int argc, WCharCP argv[])
 {
+
+    // BOOL b_utf_terminal{ SetConsoleOutputCP( /* _In_ UINT wCodePageID */ 65001) };
+    // if(!b_utf_terminal) { return; }
+
+    // std::wstring a_wide_string = s2ws("--- s2ws! äöüÄÖÜß ---");
+    // std::string a_narrow_string = ws2s(L"--- ws2s äöüÄÖÜß! ---");
+
+    // std::wcout << a_wide_string.c_str() << std::endl;
+    // std::cout << a_narrow_string.c_str() << std::endl;
+
+    // WString uml {"ä ö ü Ä Ö Ü ß"};
+    // std::wcout << L"uml == " << uml.c_str() << std::endl;
+    // BeConsole::WPrintf(L"+++%ls+++/n",uml);
 
     // /** mdlDialog_dmsgsPrint && strings
     //  **/
@@ -128,6 +165,113 @@ extern "C" DLLEXPORT void MdlMain(int argc, WCharCP argv[])
     // basePt.z -= g_1mu * 0.6;
 
     // createABsplineSurface(basePt);
+
+    ///////////////////////////
+    ///
+
+    // get pattern(s)
+    const size_t NUMBER_OF_PATTERNS{ 28 };
+
+    std::list<WString> patterns
+#include <list>
+    {
+        /* 1 */  L"ac= *"
+        /* 2 */ ,L"ac'''= *"
+        /* 3 */ ,L"ac'= *"
+        /* 4 */ ,L"ac''= *"
+        /* 5 */ ,L"ac1= *"
+        /* 6 */ ,L"ac2= *"
+        /* 7 */ ,L"ac3= *"
+        /* 8 */ ,L"ac4= *"
+
+        /* 1 */ ,L"- * -"
+        /* 2 */ ,L"{ * }"
+        /* 3 */ ,L"( * )"
+        /* 4 */ ,L"[ * ]"
+        /* 5 */ ,L"= * ="
+        /* 6 */ ,L"< * >"
+        /* 7 */ ,L"/ * /"
+        /* 8 */ ,L"' * '"
+
+        /* 1 */ ,L"a(TEXT)= * m"
+
+        /* 1 */ ,L"a(TEXT - TYP)=*"
+
+        /*  1 */ ,L"fc= *"
+        /*  2 */ ,L"fc'''= *"
+        /*  3 */ ,L"fc'= *"
+        /*  4 */ ,L"fc''= *"
+        /*  5 */ ,L"fc1= *"
+        /*  6 */ ,L"fc2= *"
+        /*  7 */ ,L"fc3= *"
+        /*  8 */ ,L"fc4= *"
+
+        /*  1 */ ,L"f(PHASE, TEXT)=*"
+
+        /*  1 */ ,L"idx(TXTIDX - PHIDX)"
+        /*  2 */ ,L"idx(PHIDX - TXTIDX)"
+    };
+
+    // tokens to be replaced
+    WCharCP ASTERISK{ L"*" };
+    WCharCP TEXT{ L"TEXT" };
+    WCharCP TXTIDX{ L"TXTIDX" };
+    WCharCP PHASE{ L"PHASE" };
+    WCharCP PHIDX{ L"PHIDX" };
+    WCharCP TYP{ L"TYP" };
+
+    // read slc values
+    WString asterisk{ L"*" };
+    WString text{ L"txt" };
+    WString txtidx{ L"txtidx" };
+    WString phase{ L"phase" };
+    WString phidx{ L"phidx" };
+    WString typ{ L"typ" };
+
+    // replace tokens of given patterns
+    for (auto pattern : patterns)
+    {
+        WString patternResolved{ pattern };
+        patternResolved.ReplaceAll(ASTERISK, asterisk.c_str());
+        patternResolved.ReplaceAll(TEXT, text.c_str());
+        patternResolved.ReplaceAll(TXTIDX, txtidx.c_str());
+        patternResolved.ReplaceAll(PHASE, phase.c_str());
+        patternResolved.ReplaceAll(PHIDX, phidx.c_str());
+        patternResolved.ReplaceAll(TYP, typ.c_str());
+        std::wcout << L"--- " << patternResolved << L" ---" << std::endl;
+    }
+
+    /////////////////////
+    //BeStringUtilities
+
+    // auto code_page {Bentley::LangCodePage::LatinI};
+    // auto code_page {Bentley::LangCodePage::Unicode};
+    // auto code_page {Bentley::LangCodePage::ISCII_UNICODE_UTF_8};
+    // auto code_page {Bentley::LangCodePage::UNICODE_UCS2_Little_Endian};
+    Bentley::LangCodePage current_code_page{};
+    auto current_code_page_rtn{ BeStringUtilities::GetCurrentCodePage(current_code_page) };
+    if (current_code_page_rtn != Bentley::BentleyStatus::SUCCESS) {
+        std::wcerr << L"Couldn't get current codepage!" << std::endl;
+    }
+    else {
+        std::wcout << L"Code page == " << static_cast<int>(current_code_page) << std::endl;
+    }
+    if (IsValidCodePage(static_cast<int>(current_code_page))) {
+        std::wcout << L"Code page is valid: " << static_cast<int>(current_code_page) << std::endl;
+    }
+    else {
+        std::wcerr << L"Code page is invalid: " << static_cast<int>(current_code_page) << std::endl;
+    }
+
+    auto code_page_cvt{ Bentley::LangCodePage::LatinI };
+    SlcFileConvert slccvt
+    (
+        /* out */  L"E:/dev/C++.MsCeMdl01/XXX.slc"
+        /*  in */, L"E:/dev/LTB.MS.ProfilAnsicht.CPP/slc_01_Muster_024A-027A.SLC"
+        /*  cp */, code_page_cvt
+    );
+    slccvt.Convert();
+
 
 } // MdlMain
 
@@ -436,6 +580,6 @@ void createAProjectedSolid(WCharCP unparsed)
 
 void createABsplineSurface(WCharCP unparsed)
 {
-    auto pTool { new PlaceBsSurfaceTool(CMDNAME_PlaceBsSurfaceTool, PROMPT_PlaceBsSurfaceTool) };
+    auto pTool{ new PlaceBsSurfaceTool(CMDNAME_PlaceBsSurfaceTool, PROMPT_PlaceBsSurfaceTool) };
     pTool->InstallTool();
 }

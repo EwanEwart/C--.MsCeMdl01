@@ -7,7 +7,7 @@ DEFAULT_TARGET_PROCESSOR_ARCHITECTURE=x64
 appName=MsCeMdl01
 
 # intermediate output locations ...
-appObjs = $(o)$(appName)$(oext) $(o)PlaceBsSurfaceTool$(oext)
+appObjs = $(o)$(appName)$(oext) $(o)PlaceBsSurfaceTool$(oext) $(o)SlcFileConvert$(oext)
 # appRscs = $(o)$(appName).rsc # EE--: adding commands below
 appRscs = $(o)$(appName).rsc $(o)$(appName)Cmd.rsc # EE++
 
@@ -109,5 +109,7 @@ $(o)$(appName)$(oext)           :   $(baseDir)$(appName).cpp
 
 # EE++
 $(o)PlaceBsSurfaceTool$(oext)   :   $(baseDir)PlaceBsSurfaceTool.cpp
+
+$(o)SlcFileConvert$(oext)       :   $(baseDir)SlcFileConvert.cpp
 
 %include dlmlink.mki

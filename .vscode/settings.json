@@ -1,5 +1,9 @@
 {
     "files.associations": {
-        "*.fdf": "cpp"
+        "*.fdf": "cpp",
+        "string": "cpp",
+        "source_location": "cpp",
+        "*.ipp": "cpp",
+        "fstream": "cpp"
     }
 }
